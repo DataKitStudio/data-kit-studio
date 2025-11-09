@@ -22,19 +22,19 @@ export const services = [
     {
         "key":1,
         "title":"Social Media Marketing",
-        "imageUrl": "/Images/social.png",
+        "imageUrl": "/Images/platforms/social.png",
         "description":"From content to conversion — we craft social experiences that spark engagement and deliver measurable growth."
     },
     {
         "key":2,
         "title":"AI Automation",
-        "imageUrl": "/Images/ai.png",
+        "imageUrl": "/Images/platforms/ai.png",
         "description":"Automate your workflows and boost productivity with AI-driven systems that handle repetitive tasks, and improve efficiency."
     },
     {
         "key":3,
         "title":"Creative Branding",
-        "imageUrl": "/Images/branding.png",
+        "imageUrl": "/Images/platforms/branding.png",
         "description":"Build a powerful, recognizable brand with creative design, strong visuals, and a strategy that connects with your audience."
 
     },

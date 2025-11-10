@@ -2,7 +2,7 @@
 import CardLight from "./components/card-light"
 
 
-export default async function ServicesBanner() {
+export default function ServicesBanner() {
 
     return (
         <div className="flex flex-col bg-light justify-between items-center gap-20 items-center width-full xl:mt-30 mt-10 px-10 xl:px-20 py-15">

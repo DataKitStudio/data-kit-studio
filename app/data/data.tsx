@@ -203,11 +203,7 @@ export const links = [
     },
     {
         name: "FAQ",
-        route: ""
-    },
-    {
-        name: "Portfolio",
-        route: ""
+        route: "/faq"
     },
 ]
 
@@ -223,7 +219,7 @@ export const contact = [
     {
         address: "24th Street, Link Road, India - 245500",
         phone:9876543210,
-        email:"hello@hello.in"
+        email:"hello@datakitstudio.in"
     }
 ]
 

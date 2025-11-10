@@ -15,19 +15,14 @@ export default function OurPromiseSection() {
     {/* Text Section (2/3 width on md+) */}
     <div className="w-full md:w-2/3 order-2 md:order-1">
       <p className="text-justify text-gray-700 leading-relaxed text-sm md:text-base">
-        We believe in turning 
-        <span className="text-primary font-semibold"> insights into action</span>, 
-        <span className="text-primary font-semibold"> ideas into impact</span>, 
-        and 
-        <span className="text-primary font-semibold"> brands into leaders.</span>
+        We believe in turning insights into action, ideas into impact, and brands into leaders.
         <br /><br />
-        At <span className="text-primary font-bold">DataKit Studio</span>, we don’t just 
-        <span className="text-primary font-semibold"> follow trends</span> — 
-        we <span className="text-primary font-semibold"> create them.</span> 
+        At <span className="text-primary font-bold">DataKit Studio</span>, we don’t just follow trends — 
+        we  create them. 
         We’re here to make sure your brand doesn’t just 
         <span className="text-primary font-semibold"> grow online</span>, 
         but 
-        <span className="text-primary font-semibold"> grows with meaning.</span>
+         grows with meaning.
         <br /><br />
         <span className="font-bold text-primary">
           DataKit Studio —

@@ -1,3 +1,4 @@
+"use client"
 import Header from "./components/header";
 import VideoTextBanner from "./homepage/vide-text-banner";
 import ServicesBanner from "./homepage/services-banner";
@@ -7,7 +8,7 @@ import ResultSection from "./homepage/result-section";
 import ProvenProcess from "./homepage/proven-process-section";
 import WhyUsSection from "./homepage/why-us-section";
 import CallToActionSection from "./homepage/call-to-action";
-import AutoScrollBanner from "./components/autoscroll-banner-strip";
+import ScrollToTopButton from "./components/scroll-to-top";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
       <WhyUsSection />
       <CallToActionSection/>
       <Footer/>
+      <ScrollToTopButton/>
     </div>
   );
 }

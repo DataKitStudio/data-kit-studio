@@ -20,7 +20,7 @@ export default function VideoTextBanner(){
             <div className="flex flex-1 flex-col justify-around items-center gap-10 w-full h-auto">
                 <h1 className="text-5xl text-dark font-extrabold">{introTitle}</h1>
                 <h1 className="text-lg text-dark text-justify">{introText}</h1>
-                <PopButton onClick={() => route.push("/contact")} text="Get Started" className=""/>
+                <PopButton onClick={() => route.push("/getstarted")} text="Get Started" className=""/>
             </div>
             
         </div>

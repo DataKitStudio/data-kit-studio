@@ -22,7 +22,7 @@ export default function Footer() {
                         <div>
                         {
                             section.name === "Quick Links" ? (
-                                links.map((link) => (
+                                links.map((link, index: number) => (
                                     <button className="text-white text-md w-full md:text-start" onClick={()=>router.push(link.route)}>{link.name}</button>
                                 ))
                             ) : null

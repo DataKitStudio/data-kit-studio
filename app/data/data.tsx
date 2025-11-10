@@ -1,3 +1,8 @@
+import strategyVideoData from "@/public/Videos/proven-section/strategy.json"
+import researchVideoData from "@/public/Videos/proven-section/discovery.json"
+import launchVideoData from "@/public/Videos/proven-section/launch.json"
+import optimizeVideoData from "@/public/Videos/proven-section/optimize.json"
+
 
 export const menuList = [
     {
@@ -40,25 +45,25 @@ export const resultData = [
 export const provenData = [
     {
         key:1,
-        image: "",
+        image: researchVideoData,
         title:"Discovery & Research",
         description:"We dive deep into your brand, audience, and competitors to uncover opportunities and craft a winning strategy."
     },
     {
         key:2,
-        image: "",
+        image: strategyVideoData,
         title:"Strategy & Planning",
         description:"We develop a comprehensive content calendar and campaign roadmap aligned with your business goals."
     },
     {
         key:3,
-        image: "",
+        image: launchVideoData,
         title:"Creation & Launch",
         description:"Our creative team produces stunning content and launches campaigns across your chosen platforms."
     },
     {
         key:4,
-        image: "",
+        image: optimizeVideoData,
         title:"Optimize & Scale",
         description:"We continuously analyze performance data and refine strategies to maximize your ROI and growth."
     },

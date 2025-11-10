@@ -26,7 +26,7 @@ export default function OurTeamSection() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
-        className="text-sm md:text-base text-center font-medium mb-6"
+        className="text-sm md:text-base text-center font-medium text-dark mb-6"
       >
         Behind every great result is a great team — and ours is the core of everything we do.
       </m.h2>

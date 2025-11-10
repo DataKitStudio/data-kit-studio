@@ -44,7 +44,7 @@ export default function ContactUsPage() {
   };
 
   return (
-    <div className="flex flex-col items-center gap-20 px-5 sm:px-10 md:px-20 py-20">
+    <div className="flex flex-col items-center gap-20 px-0 sm:px-10 md:px-20 py-20">
       <m.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -65,7 +65,7 @@ export default function ContactUsPage() {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="w-full max-w-3xl flex flex-col gap-10 shadow-lg p-8 sm:p-12 rounded-2xl 
+        className="w-full max-w-3xl flex flex-col gap-10 shadow-lg p-4 sm:p-12 rounded-2xl 
         border border-fuchsia-200 bg-white/80 backdrop-blur-lg"
       >
 

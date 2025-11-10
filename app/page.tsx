@@ -5,6 +5,9 @@ import PlatformBanner from "./homepage/platform-banner";
 import Footer from "./components/footer";
 import ResultSection from "./homepage/result-section";
 import ProvenProcess from "./homepage/proven-process-section";
+import WhyUsSection from "./homepage/why-us-section";
+import CallToActionSection from "./homepage/call-to-action";
+import AutoScrollBanner from "./components/autoscroll-banner-strip";
 
 export default function Home() {
   return (
@@ -16,6 +19,8 @@ export default function Home() {
       <ResultSection />
       <PlatformBanner />
       <ProvenProcess />
+      <WhyUsSection />
+      <CallToActionSection/>
       <Footer/>
     </div>
   );

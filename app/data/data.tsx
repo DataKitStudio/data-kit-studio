@@ -4,6 +4,39 @@ import launchVideoData from "@/public/Videos/proven-section/launch.json"
 import optimizeVideoData from "@/public/Videos/proven-section/optimize.json"
 
 
+export const whyUsData = [
+    {
+        key:1,
+        title:"Expert Team",
+        description:"Seasoned professionals with years of experience in digital marketing and content creation."
+    },
+    {
+        key:2,
+        title:"Proven Track Record",
+        description:"Over 500+ successful campaigns delivered with measurable results and consistent growth."
+    },
+    {
+        key:3,
+        title:"Data-Driven Strategy",
+        description:"Every decision backed by analytics and insights to ensure maximum ROI for your investment."
+    },
+    {
+        key:4,
+        title:"Personalized Approach",
+        description:"Custom strategies tailored to your unique brand identity, goals, and target audience."
+    },
+    {
+        key:5,
+        title:"24/7 Support",
+        description:"Round-the-clock assistance to keep your campaigns running smoothly and efficiently."
+    },
+    {
+        key:6,
+        title:"Transparent Reporting",
+        description:"Clear, detailed reports showing exactly how your campaigns are performing at all times."
+    },
+]
+
 export const menuList = [
     {
         name:"Home",
@@ -116,7 +149,7 @@ export const platforms = [
     {
         "key":1,
         "name":"Youtube",
-        "icon":"/Images/platforms/youtube.png"
+        "icon":"/Images/platforms/facebook.png"
     },
     {
         "key":2,
@@ -126,12 +159,12 @@ export const platforms = [
     {
         "key":3,
         "name":"Facebook",
-        "icon":"/Images/platforms/facebook.png"
+        "icon":"/Images/platforms/linkedin.png"
     },
     {
         "key":4,
         "name":"Google",
-        "icon":"/Images/platforms/googe.png"
+        "icon":"/Images/platforms/pintrest.png"
     },
     {
         "key":5,
@@ -141,12 +174,12 @@ export const platforms = [
     {
         "key":6,
         "name":"N8N",
-        "icon":"/Images/platforms/n8n.png"
+        "icon":"/Images/platforms/snap.png"
     },
     {
         "key":7,
         "name":"Zapier",
-        "icon":"/Images/platforms/zapier.png"
+        "icon":"/Images/platforms/x.png"
     },
 ]
 

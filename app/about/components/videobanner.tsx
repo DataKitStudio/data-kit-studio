@@ -1,12 +1,21 @@
 
 import VideoPlayer from "@/app/components/helper-components/video-player";
 import videoData from "@/public/Videos/aboutus.json"
+import AgencySection from "./agency-section";
+import WhatWeDo from "./what-we-do-section";
+import OurTeamSection from "./our-team-section";
+import OurPromiseSection from "./our-promise-section";
 
 export default function VideoBanner(){
     return(
-        <div className="w-dvw pt-5 md:px-40 px-5">
-            <div className="flex flex-col items-center lg:px-70 justify-between gap-9">
-                <h1 className="text-4xl text-dark font-extrabold ">About Us</h1>
+        <div className="flex flex-col items-center gap-30 w-dvw">
+            <h1 className="text-4xl text-primary font-extrabold ">About Us</h1>
+            <AgencySection/>
+            <WhatWeDo />
+            <OurTeamSection />
+            <OurPromiseSection/>
+            {/* <div className="flex flex-col items-center lg:px-70 justify-between gap-9">
+                <h1 className="text-4xl text-primary font-extrabold ">About Us</h1>
                 <div className="relative w-full h-full min-w-[250]">
                     <VideoPlayer videoUrl={videoData} />
                 </div>
@@ -20,7 +29,7 @@ export default function VideoBanner(){
 
                     Our team of creators, strategists, and tech enthusiasts work hand-in-hand to craft experiences that connect emotionally and convert effectively — because your brand deserves more than just visibility; it deserves a voice that stands out.
                 </p>
-            </div>
+            </div> */}
             
         </div>
     )

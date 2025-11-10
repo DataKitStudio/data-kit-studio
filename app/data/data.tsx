@@ -18,6 +18,52 @@ export const menuList = [
     },
 ]
 
+export const resultData = [
+    {
+        topic: "Clients Served",
+        result:"500+"
+    },
+    {
+        topic: "Impressions Generated",
+        result:"10M+"
+    },
+    {
+        topic: "Average ROI Increase",
+        result:"250%"
+    },
+    {
+        topic: "Client Satisfaction",
+        result:"4.9/5"
+    },
+]
+
+export const provenData = [
+    {
+        key:1,
+        image: "",
+        title:"Discovery & Research",
+        description:"We dive deep into your brand, audience, and competitors to uncover opportunities and craft a winning strategy."
+    },
+    {
+        key:2,
+        image: "",
+        title:"Strategy & Planning",
+        description:"We develop a comprehensive content calendar and campaign roadmap aligned with your business goals."
+    },
+    {
+        key:3,
+        image: "",
+        title:"Creation & Launch",
+        description:"Our creative team produces stunning content and launches campaigns across your chosen platforms."
+    },
+    {
+        key:4,
+        image: "",
+        title:"Optimize & Scale",
+        description:"We continuously analyze performance data and refine strategies to maximize your ROI and growth."
+    },
+]
+
 export const services = [
     {
         "key":1,

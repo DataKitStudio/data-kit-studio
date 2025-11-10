@@ -1,3 +1,166 @@
+
+
+export const servicesData = [
+  {
+    key: 1,
+    image: "Twitter",
+    title: "Social Media Management",
+    description:
+      "End-to-end social media strategy, content scheduling, community engagement, and performance analytics across all major platforms.",
+    services: [
+      "Platform Management",
+      "Content Calendar",
+      "Community Engagement",
+      "Analytics & Reporting",
+    ],
+  },
+  {
+    key: 2,
+    image: "PenTool",
+    title: "Content Creation",
+    description:
+      "High-quality, engaging content tailored to your brand voice including graphics, copy, videos, and multimedia assets.",
+    services: [
+      "Graphic Design",
+      "Copywriting",
+      "Video Production",
+      "Photography",
+    ],
+  },
+  {
+    key: 3,
+    image: "Megaphone",
+    title: "Digital Marketing",
+    description:
+      "Comprehensive digital marketing campaigns designed to increase brand awareness, drive traffic, and boost conversions.",
+    services: [
+      "Campaign Strategy",
+      "Ad Management",
+      "Conversion Optimization",
+      "Marketing Automation",
+    ],
+  },
+  {
+    key: 4,
+    image: "ChevronsLeftRight",
+    title: "Web Development",
+    description:
+      "Modern, responsive websites and web applications built with cutting-edge technologies for optimal performance and user experience.",
+    services: [
+      "Custom Websites",
+      "E-commerce Solutions",
+      "Web Applications",
+      "Maintenance & Support",
+    ],
+  },
+  {
+    key: 5,
+    image: "Video",
+    title: "Video Production",
+    description:
+      "Professional video content from concept to completion including promotional videos, explainers, and social media clips.",
+    services: [
+      "Video Editing",
+      "Motion Graphics",
+      "Animation",
+      "Live Streaming",
+    ],
+  },
+  {
+    key: 6,
+    image: "Target",
+    title: "Brand Strategy",
+    description:
+      "Strategic brand positioning, identity development, and messaging that resonates with your target audience.",
+    services: [
+      "Brand Identity",
+      "Market Research",
+      "Positioning Strategy",
+      "Brand Guidelines",
+    ],
+  },
+  {
+    key: 7,
+    image: "ChartColumnBig",
+    title: "Analytics & Insights",
+    description:
+      "Data-driven insights and comprehensive reporting to measure performance and optimize your marketing efforts.",
+    services: [
+      "Performance Tracking",
+      "Custom Dashboards",
+      "ROI Analysis",
+      "Competitive Analysis",
+    ],
+  },
+  {
+    key: 8,
+    image: "Mail",
+    title: "Email Marketing",
+    description:
+      "Targeted email campaigns that nurture leads, engage customers, and drive conversions with personalized messaging.",
+    services: [
+      "Campaign Design",
+      "List Management",
+      "A/B Testing",
+      "Automation Workflows",
+    ],
+  },
+  {
+    key: 9,
+    image: "Search",
+    title: "SEO Optimization",
+    description:
+      "Search engine optimization strategies to improve your online visibility and drive organic traffic to your website.",
+    services: [
+      "Keyword Research",
+      "On-Page SEO",
+      "Link Building",
+      "Technical SEO",
+    ],
+  },
+  {
+    key: 10,
+    image: "Palette",
+    title: "Graphic Design",
+    description:
+      "Eye-catching visual designs for all your marketing materials, from logos to social media graphics and print collateral.",
+    services: [
+      "Logo Design",
+      "Brand Collateral",
+      "Social Graphics",
+      "Print Design",
+    ],
+  },
+  {
+    key: 11,
+    image: "ChartSpline",
+    title: "Paid Advertising",
+    description:
+      "Strategic paid advertising campaigns across Google, Facebook, Instagram, and other platforms to maximize your ROI.",
+    services: [
+      "PPC Campaigns",
+      "Social Ads",
+      "Display Advertising",
+      "Retargeting",
+    ],
+  },
+  {
+    key: 12,
+    image: "UserStar",
+    title: "Influencer Marketing",
+    description:
+      "Connect with relevant influencers to amplify your brand message and reach new audiences authentically.",
+    services: [
+      "Influencer Outreach",
+      "Campaign Management",
+      "Content Collaboration",
+      "Performance Tracking",
+    ],
+  },
+];
+
+
+
 export const categories = [
     {
         key:1,

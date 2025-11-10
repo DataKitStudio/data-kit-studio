@@ -15,13 +15,27 @@ export default function CallToAction(){
         router.push("/contact")
     }
     return(
-        <div className="flex flex-col justify-around gap-5 xl:px-40 px-5 py-20">
-            <h1 className="text-justif text-dark text-xl font-bold">{desctitle1}</h1>
-            <h1 className="text-md text-dark text-justify font-bold sm:pl-20 pl-0">{description1}</h1>
-            <h1 className="text-justif text-dark text-xl font-bold">{desctitle2}</h1>
-            <h1 className="text-md text-dark font-bold sm:pl-20 pl-0">{description2 +" "} 
-                <PopInverseButton text="Get Started Today" onClick={handleClick}/>
-            </h1>
-        </div>
+        <div className="flex flex-col justify-center gap-8 xl:px-40 md:px-20 px-6 py-20 bg-gradient-to-b from-fuchsia-50 to-white rounded-2xl shadow-md">
+  <p className="text-lg md:text-xl text-gray-700 leading-relaxed text-justify">
+    At <span className="font-bold text-fuchsia-800">DataKit Studio</span>, we turn 
+    <span className="text-fuchsia-700 font-semibold"> ideas into measurable growth</span>.  
+    From <span className="font-medium text-fuchsia-700">social media</span> and 
+    <span className="font-medium text-fuchsia-700"> SEO</span> to 
+    <span className="font-medium text-fuchsia-700"> design</span> and 
+    <span className="font-medium text-fuchsia-700"> web development</span> — our expert team 
+    builds strategies that make your brand 
+    <span className="font-semibold text-fuchsia-800"> impossible to ignore</span>.
+    <br /><br />
+    Whether you need <span className="font-semibold text-fuchsia-700">reach</span>, 
+    <span className="font-semibold text-fuchsia-700"> results</span>, or a 
+    <span className="font-semibold text-fuchsia-700"> complete digital transformation</span> — 
+    we’re here to make it <span className="font-bold text-fuchsia-800">happen</span>.
+  </p>
+
+  <h1 className="text-lg md:text-xl text-dark font-bold text-center md:text-left">
+    {description2 + " "}
+    <PopInverseButton text="Get Started Today" onClick={handleClick} />
+  </h1>
+</div>
     )
 }

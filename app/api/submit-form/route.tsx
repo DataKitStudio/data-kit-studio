@@ -3,6 +3,7 @@ import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
+    console.log("GOOGLE_SERVICE_ACCOUNT_KEY exists:", !!process.env.GOOGLE_SERVICE_ACCOUNT_KEY);
   try {
     const { name, email, message } = await req.json();
 

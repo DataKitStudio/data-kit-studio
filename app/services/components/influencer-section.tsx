@@ -1,7 +1,8 @@
 import { ChevronRight } from "lucide-react"
 import Image from "next/image"
 import InfluencerCard from "./helper-components/influencer-card"
-
+import VideoPlayer from "@/app/components/helper-components/video-player"
+import videoData from "@/public/Videos/services-page/influencer.json"
 
 const influencerServices = [
     {
@@ -49,26 +50,26 @@ export default function InfluencerSection() {
     return(
         <div className="flex flex-col pb-20 items-center w-full ">
             
-            <div className="flex w-[90%] flex-col gap-10 rounded-2xl shadow-lg shadow-gray-400 p-10 bg-gradient-to-br from-purple-900 via-indigo-900 to-black text-gray-100">
+            <div className="flex w-[90%] flex-col gap-10 rounded-2xl shadow-lg shadow-gray-400 p-10 border border-primary/40 bg-light">
             
-            <div className="flex flex-col justify-center lg:flex-row gap-10">
+            <div className="flex flex-col justify-center items-center lg:flex-row gap-10">
                 <div className="flex flex-2 flex-col gap-10">
-                    <div className="flex flex-col items-center p-10 gap-5">
-                <h1 className="text-4xl text-light font-extrabold">Are you an influencer looking for help?</h1>
-                <h2 className="text-xl text-light font-bold">This is what we have for you.</h2>
+                    <div className="flex flex-col items-start gap-5">
+                <h1 className="text-4xl text-primary font-extrabold">Are you an influencer looking for help?</h1>
+                <h2 className="text-xl text-secondary font-bold">This is what we have for you.</h2>
             </div>
-                    <h3 className=" text-light text-lg text-justify">
+                    <h3 className=" text-dark text-lg text-justify">
                         Whether you’re just starting out or already growing fast, we’ve got everything you need to build your brand, boost engagement, and grow your income. From content strategy and brand partnerships to audience analytics and creative design — our team helps you stand out, stay consistent, and focus on what you do best: creating amazing content.
 
                         Let us handle the rest — so you can spend more time connecting with your audience and turning your influence into real results.
                     </h3>
                 </div>
                 
-                <div className="flex flex-1 w-full md:justify-center  max-h-[300px] justify-center relative">
-                    <Image src={"/Images/services-section/influencer.png"} alt="influencer" height={395} width={408} />
+                <div className="flex flex-1 md:justify-center rounded-2xl  relative w-1/3 md:w-1/3 md:h-[300px] justify-center relative">
+                    <VideoPlayer videoUrl={videoData} />
                 </div>
             </div>
-            <h1 className="w-full text-center text-light text-2xl font-extrabold">Services by us</h1>
+            <h1 className="w-full text-center text-darl text-2xl font-extrabold">Services by us</h1>
                 <div className="grid xl:grid-cols-4 grid-cols-1 gap-5">
                     {
                         influencerServices.map((service) =>(

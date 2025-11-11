@@ -50,7 +50,7 @@ export default function InfluencerSection() {
     return(
         <div className="flex flex-col pb-20 items-center w-full ">
             
-            <div className="flex w-[90%] flex-col gap-10 rounded-2xl shadow-lg shadow-gray-400 p-10 border border-primary/40 bg-light">
+            <div className="flex w-[90%] flex-col gap-10 rounded-2xl shadow-lg shadow-fuchsia-300 p-10 border border-primary/40 bg-light">
             
             <div className="flex flex-col justify-center items-center lg:flex-row gap-10">
                 <div className="flex flex-2 flex-col gap-10">

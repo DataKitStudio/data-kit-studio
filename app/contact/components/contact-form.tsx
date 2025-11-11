@@ -20,19 +20,44 @@ export default function ContactUsPage() {
   });
 
   const [error, setError] = useState<string | null>(null);
+  const [status, setStatus] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     validateData();
     if (error === null) {
-      console.log("Submitted", formData);
+      const res = await fetch("/api/submit-form",{
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+      })
+      const data = await res.json();
+      if (res.ok){
+        setStatus("Message sent successfully!")
+        setFormData({
+          name: "",
+          email:"",
+          organization: "",
+          phone: "",
+          message: "",
+          website: "",
+        })
+        console.log("Submitted", formData);
+      } else {
+        console.log("Submitted", data.error);
+        setStatus("Something went wrong.")
+      }
+      
     }
+     
   };
+
+ 
 
   const route= useRouter()
 

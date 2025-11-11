@@ -41,13 +41,12 @@ export async function POST(req: Request) {
       to: process.env.EMAIL_TO,
       subject: "📬 New Contact Form Submission",
       text: `
-You received a new message from your website contact form:
-
-Name: ${name}
-Email: ${email}
-Message:
-${message}
-`,
+        You received a new message from your website contact form:
+            Name: ${name}
+            Email: ${email}
+            Message:
+            ${message}
+            `,
     };
 
     await transporter.sendMail(mailOptions);

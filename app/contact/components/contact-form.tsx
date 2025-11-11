@@ -49,7 +49,7 @@ export default function ContactUsPage() {
         })
         console.log("Submitted", formData);
       } else {
-        console.log("Submitted", data.error);
+        console.log("Error", data.error);
         setStatus("Something went wrong.")
       }
       

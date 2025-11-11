@@ -27,7 +27,7 @@ export default function AgencySection() {
         >
           <div className="w-full h-full flex justify-center items-center">
             <Image
-              src="/Images/about-us/aboutagency.png"
+              src="/Images/about-us/about-us.png"
               alt="About agency image"
               width={500}
               height={500}

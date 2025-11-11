@@ -5,6 +5,7 @@ import { motion as m } from "framer-motion";
 import { useState } from "react";
 import { SendHorizonal, Phone, Mail, MapPin, Users } from "lucide-react";
 import AnimatedButton from "@/app/components/helper-components/animated-button";
+import toast, { Toaster } from "react-hot-toast";
 
 const inputStyle =
   "p-3 text-base text-gray-800 placeholder-gray-500 border border-gray-300 focus:border-fuchsia-500 w-full rounded-md bg-white/70 backdrop-blur-md transition-all duration-300";
@@ -28,48 +29,54 @@ export default function ContactUsPage() {
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    validateData();
-    if (error === null) {
-      const res = await fetch("/api/submit-form",{
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-      })
-      const data = await res.json();
-      if (res.ok){
-        setStatus("Message sent successfully!")
-        setFormData({
-          name: "",
-          email:"",
-          organization: "",
-          phone: "",
-          message: "",
-          website: "",
-        })
-        console.log("Submitted", formData);
-      } else {
-        console.log("Error", data.error);
-        setStatus("Something went wrong.")
-      }
-      
-    }
-     
-  };
+  e.preventDefault();
 
- 
+  if (!validateData()) return;
+  const res = await fetch("/api/submit-form", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(formData),
+  });
 
-  const route= useRouter()
+  const data = await res.json();
+
+  if (res.ok) {
+    toast.success("Message sent successfully!");
+    setFormData({
+      name: "",
+      email: "",
+      organization: "",
+      phone: "",
+      message: "",
+      website: "",
+    });
+  } else {
+    toast.error("Something went wrong. Please try again.");
+  }
+};
+
+  const route = useRouter();
 
   const validateData = () => {
-    if (!formData.name) setError("Please provide your name!");
-    else if (!formData.email) setError("Please provide your email!");
-    else if (!formData.message) setError("Please enter your message!");
-    else setError(null);
-  };
+  if (!formData.name) {
+    setError("Please provide your name!");
+    return false;
+  } else if (!formData.email) {
+    setError("Please provide your email!");
+    return false;
+  } else if (!formData.message) {
+    setError("Please enter your message!");
+    return false;
+  } else {
+    setError(null);
+    return true;
+  }
+};
 
   return (
     <div className="flex flex-col items-center gap-20 px-0 sm:px-10 md:px-20 py-20">
+      <Toaster position="top-center" reverseOrder={false} />
+
       <m.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -93,7 +100,6 @@ export default function ContactUsPage() {
         className="w-full max-w-3xl flex flex-col gap-10 shadow-lg p-4 sm:p-12 rounded-2xl 
         border border-fuchsia-200 bg-white/80 backdrop-blur-lg"
       >
-
         <div>
           <h2 className="text-2xl font-bold text-fuchsia-900">
             Chat with us<span className="text-fuchsia-500">!</span>
@@ -106,15 +112,16 @@ export default function ContactUsPage() {
         {error && <p className="text-red-500 text-sm">{error}</p>}
 
         <div className="flex flex-wrap gap-3">
-          <input onChange={handleChange} name="name" placeholder="Name*" className={inputStyle} />
-          <input onChange={handleChange} name="email" placeholder="Email*" className={inputStyle} />
-          <input onChange={handleChange} name="phone" placeholder="Phone" className={inputStyle} />
-          <input onChange={handleChange} name="organization" placeholder="Organization" className={inputStyle} />
-          <input onChange={handleChange} name="website" placeholder="Website" className={inputStyle} />
+          <input onChange={handleChange} value={formData.name} name="name" placeholder="Name*" className={inputStyle} />
+          <input onChange={handleChange} value={formData.email} name="email" placeholder="Email*" className={inputStyle} />
+          <input onChange={handleChange} value={formData.phone} name="phone" placeholder="Phone" className={inputStyle} />
+          <input onChange={handleChange} value={formData.organization} name="organization" placeholder="Organization" className={inputStyle} />
+          <input onChange={handleChange} value={formData.website} name="website" placeholder="Website" className={inputStyle} />
         </div>
 
         <textarea
           onChange={handleChange}
+          value={formData.message}
           name="message"
           placeholder="Message*"
           className={`${inputStyle} min-h-[120px]`}
@@ -195,7 +202,9 @@ export default function ContactUsPage() {
         <AnimatedButton
           text="Start Your Project"
           Icon={SendHorizonal}
-          onClick={()=>{route.push("/getstarted")}}
+          onClick={() => {
+            route.push("/getstarted");
+          }}
           className="mx-auto flex justify-center gap-3 items-center border-2 border-fuchsia-900 px-6
           py-3 text-white bg-fuchsia-900 hover:bg-fuchsia-600 rounded-xl text-lg font-semibold"
         />

@@ -10,7 +10,7 @@ export default function ProvenCard() {
         <div className="grid grid-cols-1 gap-4 pb-10 lg:px-10 lg:">
             {
                 provenData.map((data) => (
-                    <div className="flex flex-row gap-0 h-60 items-start p-5 overflow-hidden rounded-2xl shadow-xl shadow-fuchsia-100 border border-fuchsia-200 hover:shadow-2xl hover:shadow-fuchsia-300">
+                    <div className="flex flex-row gap-0 h-60 items-start sm:p-5 p-3 overflow-hidden rounded-2xl shadow-xl shadow-fuchsia-100 border border-fuchsia-200 hover:shadow-2xl hover:shadow-fuchsia-300">
                         {data.key % 2 === 0 ? (
                         <>
                         <TextSection description={data.description} title={data.title} isEven={true} delay={data.key * 0.2}/>

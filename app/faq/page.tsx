@@ -6,7 +6,7 @@ import FAQSection from "./components/question-section";
 
 export default function Faq(){
     return(
-        <div>
+        <div className="bg-light">
         <Header />
         <FAQSection />
         <Footer/>

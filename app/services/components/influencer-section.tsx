@@ -69,7 +69,7 @@ export default function InfluencerSection() {
                     <VideoPlayer videoUrl={videoData} />
                 </div>
             </div>
-            <h1 className="w-full text-center text-darl text-2xl font-extrabold">Services by us</h1>
+            <h1 className="w-full text-center text-dark text-2xl font-extrabold">Services by us</h1>
                 <div className="grid xl:grid-cols-4 grid-cols-1 gap-5">
                     {
                         influencerServices.map((service) =>(

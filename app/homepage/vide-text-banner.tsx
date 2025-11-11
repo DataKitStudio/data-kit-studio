@@ -14,7 +14,7 @@ export default function VideoTextBanner(){
     
     return(
         <div className="bg-light flex flex-col xl:flex-row w-full h-auto justify-between gap-10 xl:gap-20 items-center md:px-50 px-10">
-            <div className="flex-1 relative h-100 w-1/3 min-w-50">
+            <div className="flex-1 relative h-100 w-1/2 min-w-50">
                 <VideoPlayer videoUrl= {videoData} />
             </div>
             <div className="flex flex-1 flex-col justify-around items-center gap-10 w-full h-auto">

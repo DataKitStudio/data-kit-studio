@@ -130,7 +130,7 @@ export default function ContactUsPage() {
         className="w-full max-w-3xl rounded-xl overflow-hidden shadow-md border border-fuchsia-200"
       >
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609973464!2d72.74109936470989!3d19.082197839027623!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c63029cfd0f5%3A0x1cbfda9df08c5b1d!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1709893200000!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.952001298582!2d91.74682631496004!3d26.14451648346182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x375a5ac0b0000001%3A0x9f2cb5f7b1b292e5!2sGuwahati%2C%20Assam%2C%20India!5e0!3m2!1sen!2sin!4v1731321600000!5m2!1sen!2sin"
           width="100%"
           height="350"
           style={{ border: 0 }}

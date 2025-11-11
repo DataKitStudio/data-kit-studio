@@ -36,7 +36,7 @@ export default function OurPromiseSection() {
     {/* Image Section (1/3 width on md+) */}
     <div className="relative w-full md:w-1/3 flex justify-center order-1 md:order-2">
       <Image
-        src="/Images/about-us/aboutagency.png"
+        src="/Images/about-us/meeting.png"
         alt="About agency image"
         width={500}
         height={500}

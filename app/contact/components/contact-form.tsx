@@ -39,7 +39,12 @@ export default function ContactUsPage() {
     body: JSON.stringify(formData),
   });
 
-  const data = await res.json();
+  let data;
+  try {
+  data = await res.json();
+} catch {
+  data = null;
+};
 
   if (res.ok) {
     toast.success("Message sent successfully!");
@@ -53,6 +58,7 @@ export default function ContactUsPage() {
       type:"Contact Form"
     });
   } else {
+    console.log(res)
     toast.error("Something went wrong. Please try again.");
   }
 };

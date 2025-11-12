@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   title: "DataKit Studio",
   description: "Studio curated for you!",
   icons: {
-    icon: "/favi.png",
+    icon: "/favicon.ico",
   },
 };
 

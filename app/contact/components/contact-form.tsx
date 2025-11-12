@@ -76,7 +76,7 @@ export default function ContactUsPage() {
 };
 
   return (
-    <div className="flex flex-col items-center gap-20 px-0 sm:px-10 md:px-20 py-20">
+    <div className="flex flex-col items-center gap-20 px-0 py-20">
       <Toaster position="top-center" reverseOrder={false} />
 
       <m.div
@@ -102,12 +102,12 @@ export default function ContactUsPage() {
         className="w-full max-w-3xl flex flex-col gap-10 shadow-lg p-4 sm:p-12 rounded-2xl 
         border border-fuchsia-200 bg-white/80 backdrop-blur-lg"
       >
-        <div>
+        <div className="flex flex-col gap-10">
           <h2 className="text-2xl font-bold text-fuchsia-900">
             Chat with us<span className="text-fuchsia-500">!</span>
           </h2>
           <h3 className="text-md font-medium text-gray-700">
-            To: hello@datakitstudio.com
+            <span className="font-bold">To:</span> hello@datakitstudio.com
           </h3>
         </div>
 
@@ -133,13 +133,13 @@ export default function ContactUsPage() {
           <h2 className="text-2xl font-bold text-fuchsia-900 mb-2">Contact Information</h2>
 
           <div className="flex items-center gap-3 text-gray-700">
-            <Phone className="text-fuchsia-600" /> +91 98765 43210
+            <Phone className="text-fuchsia-600" /> 7002498166, 7002284047
           </div>
           <div className="flex items-center gap-3 text-gray-700">
             <Mail className="text-fuchsia-600" /> hello@datakitstudio.com
           </div>
           <div className="flex items-center gap-3 text-gray-700">
-            <MapPin className="text-fuchsia-600" /> Mumbai, Maharashtra, India
+            <MapPin className="text-fuchsia-600" /> Guwahati, Assam, India
           </div>
 
           <p className="text-sm text-gray-600 mt-3">
@@ -148,13 +148,13 @@ export default function ContactUsPage() {
           </p>
         </div>
 
-        <AnimatedButton
-          text="Send Message"
-          Icon={SendHorizonal}
-          className="flex justify-center gap-3 items-center border-2 border-fuchsia-900 px-6
-          py-3 text-white bg-fuchsia-900 hover:bg-fuchsia-700 rounded-xl text-lg font-semibold 
-          transition-all duration-300"
-        />
+        <div className="flex justify-center pt-4">
+            <AnimatedButton
+              text="Send Message"
+              className="flex items-center gap-3 text-lg font-semibold px-6 py-3 rounded-xl shadow-md shadow-fuchsia-200 border border-fuchsia-900 text-fuchsia-900 hover:bg-fuchsia-900 hover:shadow-lg hover:shadow-fuchsia-300 hover:text-white"
+              Icon={SendHorizonal}
+            />
+        </div>
       </m.form>
 
       <m.div
@@ -208,7 +208,7 @@ export default function ContactUsPage() {
             route.push("/getstarted");
           }}
           className="mx-auto flex justify-center gap-3 items-center border-2 border-fuchsia-900 px-6
-          py-3 text-white bg-fuchsia-900 hover:bg-fuchsia-600 rounded-xl text-lg font-semibold"
+          py-3 text-white bg-fuchsia-900 shadow-md shadow-fuchsia-200 hover:shadow-lg hover:shadow-fuchsia-300 hover:bg-light hover:text-dark rounded-xl text-lg font-semibold"
         />
       </m.div>
     </div>

@@ -43,7 +43,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="w-full flex flex-col items-center gap-10 px-5 sm:px-10 md:px-20 py-20 bg-gradient-to-b from-white to-fuchsia-50">
+    <section className="w-full flex flex-col flex-grow items-center gap-10 px-5 sm:px-10 md:px-20 py-20 bg-gradient-to-b from-white to-fuchsia-50">
       <div className="text-center max-w-3xl">
         <h1 className="text-4xl font-extrabold text-fuchsia-900 mb-4">
           Frequently Asked Questions

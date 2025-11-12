@@ -133,7 +133,7 @@ export default function FormSection() {
       <div className="flex justify-center pt-4">
         <AnimatedButton
           text="Submit Project"
-          className="flex items-center gap-3 text-lg font-semibold px-6 py-3 rounded-xl shadow-lg border border-fuchsia-900 text-fuchsia-900 hover:bg-fuchsia-900 hover:text-white transition-all"
+          className="flex items-center gap-3 text-lg font-semibold px-6 py-3 rounded-xl shadow-md shadow-fuchsia-200 border border-fuchsia-900 text-fuchsia-900 hover:bg-fuchsia-900 hover:shadow-lg hover:shadow-fuchsia-300 hover:text-white"
           Icon={SendHorizonal}
         />
       </div>

@@ -5,7 +5,7 @@ import Image from "next/image";
 import Menu from "@/app/components/menu";
 import { MobileMenuButton, MobileMenuDrawer } from "./mobile-menu";
 
-export default function Header({ className }: { className: string }) {
+export default function Header({ className }: { className?: string }) {
   const { scrollY } = useScroll();
   const [open, setOpen] = useState(false);
 

@@ -16,7 +16,7 @@ export default function VideoTextBanner() {
     return (
         <div className="bg-[url('/Images/background/banner-bg.png')] bg-cover bg-center flex flex-col xl:flex-row w-full justify-between gap-10 xl:gap-20 items-center md:px-50 px-10 py-10 lg:pb-40 lg:pt-20">
             <div className=" overflow-hidden rounded-4xl">
-                <div className="flex-1 h-100 w-100 relative min-w-50">
+                <div className="flex-1 h-auto w-auto relative min-w-50">
                     <VideoPlayer videoUrl={videoData} />
                 </div>
             </div>

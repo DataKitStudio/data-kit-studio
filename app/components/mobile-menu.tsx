@@ -31,18 +31,18 @@ export function MobileMenuDrawer({ open, setOpen }: any) {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 0.5 }}
                         exit={{ opacity: 0 }}
+                        style={{ transform: "translate3d(0,0,0)" }}
                         onClick={() => setOpen(false)}
                     />
 
                     {/* Drawer */}
                     <m.div
-                        className="fixed top-0 right-0 h-auto rounded-2xl p-2 py-10 max-h-screen 
-               w-2/3 bg-white shadow-2xl shadow-fuchsia-300/50 z-[200]
-               flex flex-col items-center justify-start overflow-y-auto"
+                        className="fixed top-0 right-0 w-2/3 max-h-screen bg-white z-[200]"
                         initial={{ x: "100%" }}
                         animate={{ x: 0 }}
                         exit={{ x: "100%" }}
-                        transition={{ duration: 0.5, ease: "easeOut" }}
+                        transition={{ duration: 0.4 }}
+                        style={{ transform: "translate3d(0,0,0)" }}
                     >
                         <button
                             className="absolute top-4 right-4 text-black"

@@ -30,13 +30,12 @@ export default function Header({ className = "" }: { className?: string }) {
         className={`
           ${className} 
           sticky top-0 z-50
-
           flex flex-row w-full justify-between items-center
           px-6 sm:px-10 xl:px-30 md:px-10
           border-b border-white/10
         `}
       >
-        <div className="flex-1 flex items-center">
+        <div className="flex-shrink-0 flex items-center">
           <Image
             src="/Images/logo-header-main.png"
             height={64}
@@ -47,10 +46,7 @@ export default function Header({ className = "" }: { className?: string }) {
         </div>
 
         {/* Desktop Menu */}
-        <div className="flex-2">
-          <Menu />
-        </div>
-
+        <Menu />
 
         {/* Mobile Menu Button (INSIDE header) */}
         <div className="md:hidden">

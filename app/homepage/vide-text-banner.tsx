@@ -25,24 +25,24 @@ export default function VideoTextBanner() {
                 <h1 className="text-lg text-center italic text-dark text-justify">{introText}</h1>
                 <PopButton onClick={() => route.push("/getstarted")} text="Book a Call" className="font-bold" icon="Phone" />
                 <h1 className="text-md font-bold text-dark text-justify">{introTag}</h1>
-                <div className="grid grid-cols-3 gap-2 sm:grid-cols-3  items-center">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:grid-cols-3  items-center">
                     <div className="flex gap-2 items-center">
-                        <div className="relative sm:w-8 sm:h-8 w-4 h-4">
+                        <div className="relative w-8 h-8">
                             <Image src={"Images/partners/meta-logo-facebook-svgrepo-com.svg"} fill alt="google" />
                         </div>
-                        <h1 className="text-lg md:text-md text-sm text-dark">Meta partner</h1>
+                        <h1 className="text-lg text-md text-dark">Meta partner</h1>
                     </div>
                     <div className="flex gap-2 items-center">
-                        <div className="relative sm:w-8 sm:h-8 w-4 h-4">
+                        <div className="relative w-8 h-8">
                             <Image src={"Images/partners/google-svgrepo-com.svg"} fill alt="google" />
                         </div>
-                        <h1 className="text-lg md:text-md text-sm text-dark">Google partner</h1>
+                        <h1 className="text-lg text-md text-dark">Google partner</h1>
                     </div>
                     <div className="flex gap-2 items-center">
-                        <div className="relative sm:w-8 sm:h-8 w-4 h-4">
+                        <div className="relative w-8 h-8">
                             <Image src={"Images/partners/shopify-color-svgrepo-com.svg"} fill alt="google" />
                         </div>
-                        <h1 className="text-lg md:text-md text-sm text-dark">Shopify partner</h1>
+                        <h1 className="text-lg text-md text-dark">Shopify partner</h1>
                     </div>
 
                 </div>

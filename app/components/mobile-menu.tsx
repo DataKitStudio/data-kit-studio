@@ -36,8 +36,9 @@ export function MobileMenuDrawer({ open, setOpen }: any) {
 
                     {/* Drawer */}
                     <m.div
-                        className="fixed top-0 right-0 h-auto rounded-2xl p-2 py-10 max-h-screen w-1/3 bg-white shadow-2xl shadow-fuchsia-300/50 z-[200]
-              flex flex-col items-center justify-center"
+                        className="fixed top-0 right-0 h-auto rounded-2xl p-2 py-10 max-h-screen 
+               w-2/3 bg-white shadow-2xl shadow-fuchsia-300/50 z-[200]
+               flex flex-col items-center justify-start overflow-y-auto"
                         initial={{ x: "100%" }}
                         animate={{ x: 0 }}
                         exit={{ x: "100%" }}

@@ -28,14 +28,14 @@ export default function Header({ className = "" }: { className?: string }) {
           backgroundColor,
         }}
         className={`
-          ${className} 
-          sticky top-0 z-50
-
-          flex flex-row w-full justify-between items-center
-          px-6 sm:px-10 xl:px-30 md:px-10
-          border-b border-white/10
-        `}
+    ${className}
+    sticky top-0 z-[300]
+    flex flex-row w-full justify-between items-center
+    px-6 sm:px-10 xl:px-30 md:px-10
+    border-b border-white/10
+  `}
       >
+
         <div className="flex-shrink-0 flex items-center">
           <Image
             src="/Images/logo-header-main.png"

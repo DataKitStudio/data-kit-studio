@@ -12,7 +12,7 @@ import ScrollToTopButton from "./components/scroll-to-top";
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-auto w-full bg-light">
+    <div className="flex flex-col bg-light h-auto w-full bg-light">
       <Header />
 
       <VideoTextBanner />

@@ -29,15 +29,15 @@ export default function VideoTextBanner() {
                     <div className="relative w-8 h-8">
                         <Image src={"Images/partners/meta-logo-facebook-svgrepo-com.svg"} fill alt="google" />
                     </div>
-                    <h1 className="text-lg">Meta partner</h1>
+                    <h1 className="text-lg text-dark">Meta partner</h1>
                     <div className="relative w-8 h-8">
                         <Image src={"Images/partners/google-svgrepo-com.svg"} fill alt="google" />
                     </div>
-                    <h1 className="text-lg">Google partner</h1>
+                    <h1 className="text-lg text-dark">Google partner</h1>
                     <div className="relative w-8 h-8">
                         <Image src={"Images/partners/shopify-color-svgrepo-com.svg"} fill alt="google" />
                     </div>
-                    <h1 className="text-lg">Shopify partner</h1>
+                    <h1 className="text-lg text-dark">Shopify partner</h1>
                 </div>
 
             </div>

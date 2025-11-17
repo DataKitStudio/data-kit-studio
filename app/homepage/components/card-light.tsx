@@ -7,7 +7,7 @@ import { services } from "@/app/data/data"
 export default function CardLight() {
 
     return (
-        <div className="grid grid-cols-2  xl:flex-row  items-center justify-center width-full">
+        <div className="grid sm:grid-cols-2 grid-cols-1  xl:flex-row  items-center justify-center width-full">
             {
                 services.map((service) => (
                     <m.div key={service.key} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }} viewport={{ once: true, amount: 0.3 }}

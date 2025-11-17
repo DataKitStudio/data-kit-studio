@@ -2,11 +2,12 @@
 import Lottie from "lottie-react";
 
 type VideoPlayerProp = {
-    videoUrl: object
+    videoUrl: object,
+    className?: string
 }
 
-export default function VideoPlayer({ videoUrl }: VideoPlayerProp) {
+export default function VideoPlayer({ videoUrl, className }: VideoPlayerProp) {
     return (
-        <Lottie className="w-full h-full" animationData={videoUrl} loop autoplay />
+        <Lottie className={`${className + " "}w-full h-full`} animationData={videoUrl} loop autoplay />
     )
 }

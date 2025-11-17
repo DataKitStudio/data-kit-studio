@@ -10,7 +10,7 @@ export default function PlatformBanner() {
             <div className="flex flex-row flex-wrap justify-center gap-4">
                 {
                     platforms.map((platform) => (
-                        <m.div key={platform.key} initial={{ opacity: 0, y: 0 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: platform.key, ease: "easeOut" }} viewport={{ amount: 0.3 }}
+                        <m.div key={platform.key} initial={{ opacity: 0, y: 0 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }} viewport={{ once: true, amount: 0.3 }}
                             className="flex gap-2 items-center justify-center">
                             <div className="relative w-15 h-15">
                                 <Image src={platform.icon} fill alt={platform.name} />

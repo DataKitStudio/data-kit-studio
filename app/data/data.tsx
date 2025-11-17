@@ -59,19 +59,23 @@ export const menuList = [
 export const resultData = [
     {
         topic: "Clients Served",
-        result: "500+"
+        result: 500,
+        value: "+"
     },
     {
-        topic: "Impressions Generated",
-        result: "10M+"
+        topic: "Impressions",
+        result: 10,
+        value: "M"
     },
     {
-        topic: "Average ROI Increase",
-        result: "250%"
+        topic: "Average ROI",
+        result: 250,
+        value: "%"
     },
     {
-        topic: "Client Satisfaction",
-        result: "4.9/5"
+        topic: "Satisfaction",
+        result: 4.9,
+        value: "/5"
     },
 ]
 

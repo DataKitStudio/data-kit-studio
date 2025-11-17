@@ -14,7 +14,7 @@ export default function VideoTextBanner() {
     const route = useRouter()
 
     return (
-        <div className="bg-[url('/Images/background/banner-bg.png')] bg-cover bg-center flex flex-col xl:flex-row w-full justify-between gap-10 xl:gap-20 items-center md:px-50 px-10 py-10 lg:pb-40 lg:pt-20">
+        <div className="bg-[url('/Images/background/banner-bg.png')] bg-cover bg-center flex flex-col xl:flex-row w-full lg:h-dvh justify-between gap-10 xl:gap-20 items-center lg:px-50 px-10 py-10 lg:pb-40 lg:pt-20">
             <div className=" overflow-hidden rounded-4xl">
                 <div className="flex-1 h-auto w-auto relative min-w-50 max-w-100">
                     <VideoPlayer videoUrl={videoData} />
@@ -25,24 +25,24 @@ export default function VideoTextBanner() {
                 <h1 className="text-lg text-center italic text-dark text-justify">{introText}</h1>
                 <PopButton onClick={() => route.push("/getstarted")} text="Book a Call" className="font-bold" icon="Phone" />
                 <h1 className="text-md font-bold text-dark text-justify">{introTag}</h1>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:grid-cols-3  items-center">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 items-center">
                     <div className="flex gap-2 items-center">
                         <div className="relative w-8 h-8">
                             <Image src={"Images/partners/meta-logo-facebook-svgrepo-com.svg"} fill alt="google" />
                         </div>
-                        <h1 className="text-lg text-md text-dark">Meta partner</h1>
+                        <h1 className="text-md text-md text-dark">Meta partner</h1>
                     </div>
                     <div className="flex gap-2 items-center">
                         <div className="relative w-8 h-8">
                             <Image src={"Images/partners/google-svgrepo-com.svg"} fill alt="google" />
                         </div>
-                        <h1 className="text-lg text-md text-dark">Google partner</h1>
+                        <h1 className="text-md text-dark">Google partner</h1>
                     </div>
                     <div className="flex gap-2 items-center">
                         <div className="relative w-8 h-8">
                             <Image src={"Images/partners/shopify-color-svgrepo-com.svg"} fill alt="google" />
                         </div>
-                        <h1 className="text-lg text-md text-dark">Shopify partner</h1>
+                        <h1 className="text-md text-dark">Shopify partner</h1>
                     </div>
 
                 </div>

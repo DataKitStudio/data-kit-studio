@@ -58,7 +58,7 @@ export const menuList = [
 
 export const resultData = [
     {
-        topic: "Clients Served",
+        topic: "Clients",
         result: 500,
         value: "+"
     },

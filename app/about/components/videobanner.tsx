@@ -6,16 +6,16 @@ import WhatWeDo from "./what-we-do-section";
 import OurTeamSection from "./our-team-section";
 import OurPromiseSection from "./our-promise-section";
 
-export default function VideoBanner(){
-    return(
-        <div className="flex flex-col items-center gap-30 w-dvw">
-            <h1 className="text-4xl text-primary font-extrabold ">About Us</h1>
-            <AgencySection/>
+export default function VideoBanner() {
+    return (
+        <div className="flex flex-col items-center gap-10 w-dvw">
+            <h1 className="text-4xl pt-10 text-primary font-extrabold ">About Us</h1>
+            <AgencySection />
             <WhatWeDo />
             <OurTeamSection />
-            <OurPromiseSection/>
-            
-            
+            <OurPromiseSection />
+
+
         </div>
     )
 }

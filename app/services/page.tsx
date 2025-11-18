@@ -9,16 +9,16 @@ import ServicesSection from "./components/services-section"
 
 
 export default function Services() {
-    return(
-        <div className="bg-light">
-            <Header/>
-            <Categories/>
+    return (
+        <div className="bg-light flex flex-col items-center">
+            <Header />
+            <Categories />
             {/* <SocialMediaSection/> */}
             <ServicesSection />
-            <InfluencerSection/>
-            <CallToAction/>
-            <Footer/>
-            <ScrollToTopButton/>
+            <InfluencerSection />
+            <CallToAction />
+            <Footer />
+            <ScrollToTopButton />
         </div>
     )
 }

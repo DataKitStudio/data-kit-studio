@@ -19,7 +19,7 @@ export default function CallToActionSection() {
                 Let's discuss how we can help your brand achieve remarkable growth through strategic digital marketing.
             </h2>
             <div className="flex sm:flex-row flex-col gap-15 w-full items-center justify-center min-w-170">
-                <PopButton text="Start Your Project" className="text-md" icon="Rocket" />
+                <PopButton text="Start Your Project" className="text-md" icon="Rocket" onClick={() => { router.push("/getstarted") }} />
                 {/* <m.button
                 onClick={()=>{router.push("/getstarted")}}
                 whileHover={{scale:1.1}}
@@ -32,7 +32,7 @@ export default function CallToActionSection() {
                     transition={{ duration: 0.5 }}
                     className="flex gap-2 border-2 justify-center max-w-60 border-primary text-primary items-center font-bold p-4 rounded-xl shadow-xl
                 hover:bg-primary hover:text-light">Contact Sales<MessageCircle /></m.button> */}
-                <PopButton text="Contact Us" icon="MessageCircle" />
+                <PopButton text="Contact Us" icon="MessageCircle" onClick={() => { router.push("/contact") }} />
             </div>
         </div>
     )

@@ -25,7 +25,6 @@ export function MobileMenuDrawer({ open, setOpen }: any) {
         <AnimatePresence>
             {open && (
                 <>
-                    {/* Overlay */}
                     <m.div
                         className="fixed inset-0 bg-black/50 z-[190]"
                         initial={{ opacity: 0 }}
@@ -35,14 +34,14 @@ export function MobileMenuDrawer({ open, setOpen }: any) {
                         onClick={() => setOpen(false)}
                     />
 
-                    {/* Drawer */}
                     <m.div
-                        className="fixed top-0 right-0 w-2/3 max-h-screen bg-white z-[200]"
+                        className="fixed top-0 right-0 w-1/2 h-full pt-20 
+                        bg-white/30 backdrop-blur-xl shadow-lg
+                        z-[200]"
                         initial={{ x: "100%" }}
                         animate={{ x: 0 }}
                         exit={{ x: "100%" }}
                         transition={{ duration: 0.4 }}
-                        style={{ transform: "translate3d(0,0,0)" }}
                     >
                         <button
                             className="absolute top-4 right-4 text-black"
@@ -61,9 +60,8 @@ export function MobileMenuDrawer({ open, setOpen }: any) {
                                         router.push(item.href);
                                         setOpen(false);
                                     }}
-                                    // whileHover={{ scale: 1.05 }}
                                     className={`w-full py-4 text-center font-extrabold text-lg 
-                    ${isActive
+                                        ${isActive
                                             ? "text-fuchsia-900 bg-fuchsia-50"
                                             : "text-black hover:text-fuchsia-900"
                                         }`}

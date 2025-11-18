@@ -57,11 +57,11 @@ export const menuList = [
 ]
 
 export const resultData = [
-    {
-        topic: "Clients",
-        result: 500,
-        value: "+"
-    },
+    // {
+    //     topic: "Clients",
+    //     result: 500,
+    //     value: "+"
+    // },
     {
         topic: "Impressions",
         result: 10,
@@ -137,7 +137,7 @@ export const services = [
     {
         "key": 5,
         "title": "Staffing Services",
-        "imageUrl": "/Images/services-section/world.png",
+        "imageUrl": "/Images/services-section/personal-information.png",
         "description": "Connect with the right talent faster and build teams that push your business forward."
 
     },

@@ -1,5 +1,6 @@
 "use client"
 import AnimatedButton from "@/app/components/helper-components/animated-button";
+import PopButton from "@/app/components/helper-components/pop-button";
 import { SendHorizonal } from "lucide-react";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
@@ -13,12 +14,12 @@ export default function FormSection() {
     email: "",
     phone: "",
     organization: "",
-    project:"",
-    message:"",
-    type:"Project Form"
+    project: "",
+    message: "",
+    type: "Project Form"
   })
 
-  const handleChange = (e: React.ChangeEvent<any>) =>{
+  const handleChange = (e: React.ChangeEvent<any>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   }
@@ -28,50 +29,50 @@ export default function FormSection() {
 
     if (!validateData()) return;
     const res = await fetch("/api/submit-form", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(formData),
-  });
-  const data = await res.json();
-  if (res.ok) {
-    toast.success("Message sent successfully!");
-    setFormData({
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+    const data = await res.json();
+    if (res.ok) {
+      toast.success("Message sent successfully!");
+      setFormData({
         name: "",
         email: "",
         phone: "",
         organization: "",
-        project:"",
-        message:"",
-        type:"Project Form"
-    });
-  } else {
-    toast.error("Something went wrong. Please try again.");
-  }
+        project: "",
+        message: "",
+        type: "Project Form"
+      });
+    } else {
+      toast.error("Something went wrong. Please try again.");
+    }
   }
 
   const validateData = () => {
-  if (!formData.name) {
-    setError("Please provide your name!");
-    return false;
-  } else if (!formData.email) {
-    setError("Please provide your email!");
-    return false;
-  } else if (!formData.message) {
-    setError("Please enter your message!");
-    return false;
-  } else {
-    setError(null);
-    return true;
-  }
-};
+    if (!formData.name) {
+      setError("Please provide your name!");
+      return false;
+    } else if (!formData.email) {
+      setError("Please provide your email!");
+      return false;
+    } else if (!formData.message) {
+      setError("Please enter your message!");
+      return false;
+    } else {
+      setError(null);
+      return true;
+    }
+  };
 
-    return(
-        <div className="flex flex-col items-center gap-10 py-10 bg-fuchsia-100/40">
-          <Toaster position="top-center" reverseOrder={false} />
-            <h1 className="text-4xl font-extrabold text-primary">Your info please</h1>
-            <form className="flex flex-col gap-10 w-[80%] sm:w-[60%] lg:w-[40%]" onSubmit={handleSubmit}>
-              {error && <p className="text-red-500 text-sm">{error}</p>}
-            <input
+  return (
+    <div className="flex flex-col items-center gap-10 py-10 bg-fuchsia-100/40">
+      <Toaster position="top-center" reverseOrder={false} />
+      <h1 className="text-6xl sm-text-7xl  font-extrabold bg-gradient-to-b from-fuchsia-900 via-[#f081f3] to-[#a3a9ce] bg-clip-text text-transparent">Your info please</h1>
+      <form className="flex flex-col gap-10 w-[80%] sm:w-[60%] lg:w-[40%]" onSubmit={handleSubmit}>
+        {error && <p className="text-red-500 text-sm">{error}</p>}
+        <input
           name="name"
           onChange={handleChange}
           value={formData.name}
@@ -129,15 +130,11 @@ export default function FormSection() {
           placeholder="Tell us more about your project..."
         />
 
-      {/* Button */}
-      <div className="flex justify-center pt-4">
-        <AnimatedButton
-          text="Submit Project"
-          className="flex items-center gap-3 text-lg font-semibold px-6 py-3 rounded-xl shadow-md shadow-fuchsia-200 border border-fuchsia-900 text-fuchsia-900 hover:bg-fuchsia-900 hover:shadow-lg hover:shadow-fuchsia-300 hover:text-white"
-          Icon={SendHorizonal}
-        />
-      </div>
-    </form>
-          </div>
-    )
+        {/* Button */}
+        <div className="flex justify-center pt-4">
+          <PopButton text="Submit Project" icon="SendHorizontal" />
+        </div>
+      </form>
+    </div>
+  )
 }

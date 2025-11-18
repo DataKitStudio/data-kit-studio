@@ -8,11 +8,11 @@ export default function ResultSection() {
         <div className="w-full bg-light flex flex-col py-10 items-center">
             <div className="flex flex-col items-center min-h-[300px] lg:flex-row gap-8 lg:w-[75%] w-[95%] rounded-3xl  py-10  overflow-hidden border border-fuchsia-300/50 shadow-lg shadow-fuchsia-300 ">
 
-                <div className="z-10 flex flex-col gap-8 items-center px-10">
-                    <h1 className="text-4xl text-secondary font-extrabold">Numbers are telling our story</h1>
-                    <h2 className="text-sm text-dark">
+                <div className="z-10 flex flex-col gap-8 items-start px-10">
+                    <h1 className="text-7xl bg-gradient-to-b p-5 from-fuchsia-900 via-[#f081f3] to-[#a3a9ce] bg-clip-text text-transparent font-extrabold">Numbers are telling our story</h1>
+                    {/* <h2 className="text-sm text-dark ">
                         Numbers that showcase our commitment to excellence
-                    </h2>
+                    </h2> */}
                 </div>
 
                 <div className="relative w-full h-full z-10">

@@ -19,7 +19,7 @@ export default function Home() {
       <ServicesBanner />
       {/* <AutoScrollBanner /> */}
       <ResultSection />
-      <PlatformBanner />
+      {/* <PlatformBanner /> */}
       <ProvenProcess />
       <WhyUsSection />
       <CallToActionSection />

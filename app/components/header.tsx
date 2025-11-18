@@ -31,9 +31,6 @@ export default function Header({ className = "" }: { className?: string }) {
     (v) => `rgba(255,255,255,${v})`
   );
 
-  /* --------------------------------------------
-     3. Blur ONLY when scrolling
-  --------------------------------------------- */
   const blurFilter = useTransform(
     scrollY,
     [0, 100],
@@ -48,7 +45,7 @@ export default function Header({ className = "" }: { className?: string }) {
           backgroundColor,
           backdropFilter: blurFilter,
           WebkitBackdropFilter: blurFilter,
-          transformOrigin: "top",   // ← FIX THE GAP
+          transformOrigin: "top",
         }}
         className={`
     ${className}

@@ -5,12 +5,13 @@ import { motion as m } from "framer-motion";
 
 export default function AgencySection() {
   return (
-    <section className="flex flex-col items-center gap-10 w-[90%] md:w-[85%] lg:w-[80%] mx-auto rounded-2xl shadow-2xl p-6 md:p-12 border border-fuchsia-100 bg-white/90 backdrop-blur-md">
+    <section className="flex flex-col items-center gap-10 w-[90%] lg:w-[75%] mx-auto p-10">
       {/* Heading */}
       <m.h1
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true }}
         className="text-2xl md:text-3xl font-bold text-primary text-center mb-8 tracking-wide"
       >
         About Our Agency
@@ -23,6 +24,7 @@ export default function AgencySection() {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true }}
           className="relative w-full md:w-1/3 flex justify-center order-1 md:order-1"
         >
           <div className="w-full h-full flex justify-center items-center">
@@ -41,14 +43,10 @@ export default function AgencySection() {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
+          viewport={{ once: true }}
           className="w-full md:w-2/3 order-2 md:order-2"
         >
           <p className="text-justify text-gray-700 leading-relaxed text-sm md:text-base tracking-wide">
-            <b className="text-primary text-4xl font-bold">I</b>n today’s
-            fast-moving online world, standing out isn’t easy — but that’s where
-            we come in.
-            <br />
-            <br />
             At{" "}
             <i className="text-primary font-bold not-italic">DataKit Studio</i>,
             we combine the power of data and creativity to build campaigns that

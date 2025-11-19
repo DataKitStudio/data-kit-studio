@@ -20,7 +20,7 @@ export default function Home() {
       {/* <AutoScrollBanner /> */}
       <ResultSection />
       {/* <PlatformBanner /> */}
-      <ProvenProcess />
+      {/* <ProvenProcess /> */}
       <WhyUsSection />
       <CallToActionSection />
       <Footer />

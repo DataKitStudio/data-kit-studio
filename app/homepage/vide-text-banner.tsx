@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { motion as m, scale } from "motion/react";
 import VideoPlayer from "../components/helper-components/video-player";
-import videoData from "@/public/Videos/homepage/video-banner.json";
 import PopButton from "../components/helper-components/pop-button";
 import { useRouter } from "next/navigation";
 
@@ -17,7 +16,7 @@ export default function VideoTextBanner() {
         <div className="bg-[url('/Images/background/banner-bg.png')] bg-cover bg-center flex flex-col xl:flex-row w-full lg:h-dvh justify-between gap-10 xl:gap-20 items-center lg:px-50 px-10 py-10 lg:pb-40 lg:pt-20">
             <div className=" overflow-hidden rounded-4xl">
                 <div className="flex-1 h-auto w-auto relative min-w-50 max-w-100">
-                    <VideoPlayer videoUrl={videoData} />
+                    <VideoPlayer videoUrl="/Videos/homepage/homepage-banner.webm" />
                 </div>
             </div>
             <div className="flex flex-2 flex-col justify-around items-center gap-10 w-full h-auto">

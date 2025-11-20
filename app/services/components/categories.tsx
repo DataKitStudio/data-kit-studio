@@ -1,6 +1,5 @@
 
 import VideoPlayer from "@/app/components/helper-components/video-player";
-import videoData from "@/public/Videos/services-page/services.json";
 import AnimatedH1 from "@/app/components/helper-components/animated-h1";
 
 export default function Categories() {
@@ -17,7 +16,7 @@ export default function Categories() {
         />
       </div>
       <div className="relative w-full h-auto w-auto relative md:w-1/2 lg:w-1/3 rounded-4xl overflow-hidden">
-        <VideoPlayer videoUrl={videoData} />
+        <VideoPlayer videoUrl="/Videos/services-page/influencer.webm" />
       </div>
     </div>
   );

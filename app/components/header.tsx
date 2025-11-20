@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import {
   motion,
@@ -14,32 +15,36 @@ export default function Header({ className = "" }: { className?: string }) {
   const { scrollY } = useScroll();
   const [open, setOpen] = useState(false);
 
-  /* Smooth scale ONLY on Y axis (cheap on GPU) */
-  const rawScale = useTransform(scrollY, [0, 120], [1, 0.9]);
-  const scaleY = useSpring(rawScale, { stiffness: 160, damping: 20 });
+  /* --------------------------------------------
+     Smooth, lightweight animations (no transforms)
+  --------------------------------------------- */
 
-  /* Animate only opacity — very cheap */
+  // Header padding shrink on scroll (very cheap)
+  const rawPadding = useTransform(scrollY, [0, 120], [16, 8]); // px
+  const paddingY = useSpring(rawPadding, { stiffness: 140, damping: 18 });
+
+  // Background opacity
   const bgOpacity = useTransform(scrollY, [0, 120], [0.05, 0.15]);
-  const backgroundColor = useTransform(bgOpacity, (v) => `rgba(255,255,255,${v})`);
+  const backgroundColor = useTransform(
+    bgOpacity,
+    (v) => `rgba(255,255,255,${v})`
+  );
+
   return (
     <>
       <motion.header
         style={{
-          scaleY,
-          backgroundColor: backgroundColor,
-
-          // Keep blur static — DO NOT animate it
+          paddingTop: paddingY,
+          paddingBottom: paddingY,
+          backgroundColor,
           backdropFilter: "blur(12px)",
-          WebkitBackdropFilter: "blur(12px)",
-
-          transformOrigin: "top"
+          WebkitBackdropFilter: "blur(12px)"
         }}
         className={`
           ${className}
           sticky top-0 z-50
           flex flex-row w-full justify-between items-center
           px-6 sm:px-10 xl:px-30 md:px-10
-          py-3
           border-b border-white/20
           bg-white/5
         `}
@@ -54,13 +59,16 @@ export default function Header({ className = "" }: { className?: string }) {
           />
         </div>
 
+        {/* Desktop Menu */}
         <Menu />
 
+        {/* Mobile Burger */}
         <div className="md:hidden">
           <MobileMenuButton onOpen={() => setOpen(true)} />
         </div>
       </motion.header>
 
+      {/* Drawer */}
       <MobileMenuDrawer open={open} setOpen={setOpen} />
     </>
   );

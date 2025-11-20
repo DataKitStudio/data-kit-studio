@@ -1,9 +1,5 @@
 
-import VideoBanner from "../about/components/videobanner"
-import VideoPlayer from "../components/helper-components/video-player"
 import CardLight from "./components/card-light"
-import VideoData from "@/public/Videos/homepage/service-arrow.json"
-// import BackgroundVideo from "@/public/Videos/homepage/background-animation.json"
 import NormalButton from "../components/helper-components/normal-button"
 import AnimatedAsset from "../components/helper-components/animated-asset"
 

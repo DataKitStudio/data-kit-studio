@@ -1,6 +1,5 @@
-"use client";
+
 import Image from "next/image";
-import { motion as m, scale } from "motion/react";
 import VideoPlayer from "../components/helper-components/video-player";
 import PopButton from "../components/helper-components/pop-button";
 import { useRouter } from "next/navigation";

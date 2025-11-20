@@ -1,5 +1,4 @@
-"use client"
-import { motion as m } from "motion/react"
+
 import Image from "next/image"
 import { services } from "@/app/data/data"
 

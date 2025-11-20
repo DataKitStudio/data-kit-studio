@@ -1,6 +1,4 @@
-"use client"
-import { MessageCircle, Rocket } from "lucide-react";
-import { motion as m, scale } from "motion/react"
+
 import { useRouter } from "next/navigation";
 import PopButton from "../components/helper-components/pop-button";
 

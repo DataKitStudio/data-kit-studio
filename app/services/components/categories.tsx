@@ -1,6 +1,6 @@
 
 import VideoPlayer from "@/app/components/helper-components/video-player";
-import videoData from "@/public/Videos/services-page/influencer-compressed.json";
+import videoData from "@/public/Videos/services-page/services.json";
 import AnimatedH1 from "@/app/components/helper-components/animated-h1";
 
 export default function Categories() {

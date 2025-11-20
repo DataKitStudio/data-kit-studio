@@ -33,7 +33,7 @@ export default function CallToAction() {
           we’re here to make it <span className="font-bold text-fuchsia-800">happen</span>.
         </p>
 
-        <h1 className="flex flex-col items-center gap-5 sm:flex-row text-md">
+        <h1 className="flex flex-col items-center gap-5 sm:flex-row text-dark text-md">
           {description2 + " "}
           <PopButton text="Get Started Today" icon="Rocket" onClick={handleClick} />
         </h1>

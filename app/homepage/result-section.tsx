@@ -1,6 +1,5 @@
 import VideoPlayer from "../components/helper-components/video-player";
 import ResultCard from "./components/result-card";
-import VideoUrl from "@/public/Videos/homepage/background-service.json"
 
 
 export default function ResultSection() {

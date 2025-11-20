@@ -41,11 +41,13 @@ export default function VideoPlayer({ videoUrl, className }: VideoPlayerProp) {
     return (
         <div ref={containerRef} className={className}>
             <Lottie
+                className={className}
                 lottieRef={lottieRef}
                 animationData={videoUrl}
                 autoplay={false}
                 loop
                 style={{ width: "100%", height: "100%" }}
+                preload="none"
             />
         </div>
     );

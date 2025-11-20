@@ -1,6 +1,5 @@
 
 import VideoPlayer from "@/app/components/helper-components/video-player";
-import videoData from "@/public/Videos/aboutus.json"
 import AgencySection from "./agency-section";
 import WhatWeDo from "./what-we-do-section";
 import OurTeamSection from "./our-team-section";

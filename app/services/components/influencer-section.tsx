@@ -2,7 +2,7 @@ import { ChevronRight } from "lucide-react"
 import Image from "next/image"
 import InfluencerCard from "./helper-components/influencer-card"
 import VideoPlayer from "@/app/components/helper-components/video-player"
-import videoData from "@/public/Videos/services-page/influencer.json"
+import videoData from "@/public/Videos/services-page/influencer-compressed.json"
 import NormalButton from "@/app/components/helper-components/normal-button"
 
 const influencerServices = [
@@ -72,7 +72,7 @@ export default function InfluencerSection() {
                     </div>
 
                     {/* VIDEO — default first, LG second */}
-                    <div className="flex flex-1 md:justify-center rounded-2xl overflow-hidden relative w-full md:w-1/2 lg:w-1/3 md:h-[300px] order-1 lg:order-2">
+                    <div className="flex flex-1 md:justify-center rounded-4xl overflow-hidden relative w-full md:w-1/2 lg:w-1/3 order-1 lg:order-2">
                         <VideoPlayer videoUrl={videoData} />
                     </div>
 

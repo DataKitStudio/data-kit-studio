@@ -8,9 +8,9 @@ export default function AgencySection() {
     <section className="flex flex-col gap-10 items-center w-[90%] lg:w-[75%] mx-auto">
       {/* Heading */}
       <m.h1
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
         viewport={{ once: true }}
         className="text-2xl md:text-3xl font-bold text-primary text-center mb-8 tracking-wide"
       >
@@ -21,13 +21,14 @@ export default function AgencySection() {
       <div className="flex flex-col md:flex-row items-center gap-10 md:gap-5">
         {/* Image Section */}
         <m.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true }}
           className="relative w-full md:w-1/3 flex justify-center order-1 md:order-1"
         >
-          <div className="w-full h-full flex justify-center items-center">
+          <div
+            className="w-full h-full flex justify-center items-center">
             <Image
               src="/Images/about-us/about-us.png"
               alt="About agency image"
@@ -40,8 +41,8 @@ export default function AgencySection() {
 
         {/* Text Section */}
         <m.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           viewport={{ once: true }}
           className="w-full md:w-2/3 order-2 md:order-2"

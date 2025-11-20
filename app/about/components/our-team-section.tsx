@@ -13,7 +13,7 @@ export default function OurTeamSection() {
     >
       {/* Title */}
       <m.h1
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
         viewport={{ once: true }}
@@ -24,7 +24,7 @@ export default function OurTeamSection() {
 
       {/* Subtitle */}
       <m.h2
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
         viewport={{ once: true }}
@@ -35,9 +35,9 @@ export default function OurTeamSection() {
 
       {/* Description */}
       <m.p
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
         viewport={{ once: true }}
         className="text-gray-700 text-justify leading-relaxed text-sm md:text-base"
       >

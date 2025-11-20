@@ -10,8 +10,7 @@ export default function CardLight() {
         <div className="grid sm:grid-cols-2 grid-cols-1  xl:flex-row  items-center justify-center width-full">
             {
                 services.map((service) => (
-                    <m.div key={service.key} initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: "easeOut" }} viewport={{ once: true, amount: 0.3 }}
-                        whileHover={{ scale: 1.05 }} className="flex gap-5 md:p-5 py-5 flex-row md:items-start items-center w-full h-auto ">
+                    <div className="flex gap-5 md:p-5 py-5 flex-row md:items-start items-center w-full h-auto ">
 
                         <Image src={service.imageUrl} width={30} height={50} alt={service.title} />
                         <div>
@@ -19,7 +18,7 @@ export default function CardLight() {
                             <h1 className="text-sm text-dark">{service.description}</h1>
                         </div>
 
-                    </m.div>
+                    </div>
                 ))
             }
         </div>

@@ -105,12 +105,7 @@ export default function ContactUsPage() {
           </p>
         </m.div>
 
-        <m.form
-          onSubmit={handleSubmit}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
+        <form
           className="w-full max-w-3xl flex flex-col gap-10 shadow-lg p-4 sm:p-12 rounded-2xl 
         border border-fuchsia-200 bg-white/80 backdrop-blur-lg"
         >
@@ -164,13 +159,9 @@ export default function ContactUsPage() {
             <PopButton text="Send Message" icon="SendHorizontal" />
 
           </div>
-        </m.form>
+        </form>
 
-        <m.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
+        <div
           className="w-full max-w-3xl rounded-xl overflow-hidden shadow-md border border-fuchsia-200"
         >
           <iframe
@@ -181,7 +172,7 @@ export default function ContactUsPage() {
             loading="lazy"
             allowFullScreen
           ></iframe>
-        </m.div>
+        </div>
 
         <m.div
           initial={{ opacity: 0, y: 20 }}

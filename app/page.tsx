@@ -6,6 +6,7 @@ import ResultSection from "./homepage/result-section";
 import WhyUsSection from "./homepage/why-us-section";
 import CallToActionSection from "./homepage/call-to-action";
 import ScrollToTopButton from "./components/scroll-to-top";
+import ProcessSection from "./homepage/process-section";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <VideoTextBanner />
       <ServicesBanner />
       <ResultSection />
+      <ProcessSection />
       <WhyUsSection />
       <CallToActionSection />
       <Footer />

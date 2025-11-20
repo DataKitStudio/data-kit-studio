@@ -7,7 +7,7 @@ import { services } from "@/app/data/data"
 export default function CardLight() {
 
     return (
-        <div className="grid sm:grid-cols-2 grid-cols-1  xl:flex-row  items-center justify-center width-full">
+        <div className="grid sm:grid-cols-2 z-1 bg-white/10 grid-cols-1  xl:flex-row  items-center justify-center width-full">
             {
                 services.map((service) => (
                     <div className="flex gap-5 md:p-5 py-5 flex-row md:items-start items-center w-full h-auto ">

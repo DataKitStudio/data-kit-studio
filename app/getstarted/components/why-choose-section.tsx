@@ -5,7 +5,7 @@ import { SendHorizonal, CheckCircle, Target, Lightbulb, Rocket } from "lucide-re
 export default function WhyChooseSection() {
     return (
         <div className="flex flex-col w-full py-20 items-center">
-            <div className="flex flex-col items-center gap-10 w-[95%] xl:w-[75%] py-20 px-10 shadow-md shadow-fuchsia-300 rounded-2xl">
+            <div className="flex flex-col items-center gap-10 w-[95%] xl:w-[75%] py-20 px-5 shadow-md shadow-fuchsia-300 rounded-2xl">
                 <h2 className="text-6xl p-2 sm:text-7xl font-bold bg-gradient-to-b from-fuchsia-900 via-[#f081f3] to-[#a3a9ce] bg-clip-text text-transparent">
                     Why Choose DataKit Studio?
                 </h2>
@@ -18,7 +18,7 @@ export default function WhyChooseSection() {
                     ].map((text, i) => (
                         <div
                             key={i}
-                            className="bg-white flex flex-col"
+                            className="bg-white flex flex-row items-center lg:justify-center justify-start gap-4"
                         >
                             <CheckCircle className="w-10 h-10 text-secondary mb-3" />
                             <p className="text-gray-700 text-sm sm:text-base">{text}</p>

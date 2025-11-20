@@ -1,7 +1,5 @@
 "use client"
-import AnimatedButton from "@/app/components/helper-components/animated-button";
 import PopButton from "@/app/components/helper-components/pop-button";
-import { SendHorizonal } from "lucide-react";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
@@ -69,8 +67,7 @@ export default function FormSection() {
   return (
     <div className="w-full flex flex-col bg-fuchsia-100/40 items-center">
 
-
-      <div className="flex flex-col items-center w-[95%] lg:w-[40%] items-center gap-10 py-10 ">
+      <div className="flex flex-col items-center w-[95%] lg:w-[40%] items-center gap-10 px-5 py-10 ">
         <Toaster position="top-center" reverseOrder={false} />
         <h1 className="text-6xl sm-text-7xl  font-bold bg-gradient-to-b from-fuchsia-900 via-[#f081f3] to-[#a3a9ce] bg-clip-text text-transparent">Your info please</h1>
         <div>

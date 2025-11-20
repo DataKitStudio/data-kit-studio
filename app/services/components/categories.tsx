@@ -16,7 +16,7 @@ export default function Categories() {
         />
       </div>
       <div className="relative w-full h-auto w-auto relative md:w-1/2 lg:w-1/3 rounded-4xl overflow-hidden">
-        <VideoPlayer videoUrl="/Videos/services-page/influencer.webm" />
+        <VideoPlayer videoUrl="/Videos/services-page/services.webm" />
       </div>
     </div>
   );

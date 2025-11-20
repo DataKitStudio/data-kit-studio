@@ -14,50 +14,36 @@ export default function Header({ className = "" }: { className?: string }) {
   const { scrollY } = useScroll();
   const [open, setOpen] = useState(false);
 
-  /* --------------------------------------------
-     1. Scale height only (no width shrinking)
-  --------------------------------------------- */
+  /* Smooth scale ONLY on Y axis (cheap on GPU) */
   const rawScale = useTransform(scrollY, [0, 120], [1, 0.9]);
-  const scale = useSpring(rawScale, { stiffness: 180, damping: 18 });
+  const scaleY = useSpring(rawScale, { stiffness: 160, damping: 20 });
 
-  /* --------------------------------------------
-     2. Background opacity
-  --------------------------------------------- */
-  const rawBgOpacity = useTransform(scrollY, [0, 120], [0.05, 0.15]);
-  const bgOpacity = useSpring(rawBgOpacity, { stiffness: 120, damping: 20 });
-
-  const backgroundColor = useTransform(
-    bgOpacity,
-    (v) => `rgba(255,255,255,${v})`
-  );
-
-  const blurFilter = useTransform(
-    scrollY,
-    [0, 100],
-    ["blur(0px)", "blur(16px)"]
-  );
-
+  /* Animate only opacity — very cheap */
+  const bgOpacity = useTransform(scrollY, [0, 120], [0.05, 0.15]);
+  const backgroundColor = useTransform(bgOpacity, (v) => `rgba(255,255,255,${v})`);
   return (
     <>
       <motion.header
         style={{
-          scaleY: scale,
-          backgroundColor,
-          backdropFilter: blurFilter,
-          WebkitBackdropFilter: blurFilter,
-          transformOrigin: "top",
+          scaleY,
+          backgroundColor: backgroundColor,
+
+          // Keep blur static — DO NOT animate it
+          backdropFilter: "blur(12px)",
+          WebkitBackdropFilter: "blur(12px)",
+
+          transformOrigin: "top"
         }}
         className={`
-    ${className}
-    sticky top-0 z-50
-    flex flex-row w-full justify-between items-center
-    px-6 sm:px-10 xl:px-30 md:px-10
-    py-3
-    border-b border-white/20
-    bg-white/5
-  `}
+          ${className}
+          sticky top-0 z-50
+          flex flex-row w-full justify-between items-center
+          px-6 sm:px-10 xl:px-30 md:px-10
+          py-3
+          border-b border-white/20
+          bg-white/5
+        `}
       >
-
         <div className="flex-shrink-0 flex items-center">
           <Image
             src="/Images/logo-header-main.png"
@@ -68,7 +54,6 @@ export default function Header({ className = "" }: { className?: string }) {
           />
         </div>
 
-        {/* Desktop Menu */}
         <Menu />
 
         <div className="md:hidden">
@@ -76,7 +61,6 @@ export default function Header({ className = "" }: { className?: string }) {
         </div>
       </motion.header>
 
-      {/* Drawer */}
       <MobileMenuDrawer open={open} setOpen={setOpen} />
     </>
   );

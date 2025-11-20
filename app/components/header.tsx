@@ -4,8 +4,7 @@ import { useState } from "react";
 import {
   motion,
   useScroll,
-  useTransform,
-  useSpring
+  useTransform
 } from "framer-motion";
 import Image from "next/image";
 import Menu from "@/app/components/menu";
@@ -15,27 +14,17 @@ export default function Header({ className = "" }: { className?: string }) {
   const { scrollY } = useScroll();
   const [open, setOpen] = useState(false);
 
-  /* --------------------------------------------
-     Smooth, lightweight animations (no transforms)
-  --------------------------------------------- */
-
-  // Header padding shrink on scroll (very cheap)
-  const rawPadding = useTransform(scrollY, [0, 120], [16, 8]); // px
-  const paddingY = useSpring(rawPadding, { stiffness: 140, damping: 18 });
-
-  // Background opacity
-  const bgOpacity = useTransform(scrollY, [0, 120], [0.05, 0.15]);
+  // Fade-in background on scroll
+  const bgOpacity = useTransform(scrollY, [0, 120], [0, 0.15]);
   const backgroundColor = useTransform(
     bgOpacity,
-    (v) => `rgba(255,255,255,${v})`
+    (v) => `rgba(255, 255, 255, ${v})`
   );
 
   return (
     <>
       <motion.header
         style={{
-          paddingTop: paddingY,
-          paddingBottom: paddingY,
           backgroundColor,
           backdropFilter: "blur(12px)",
           WebkitBackdropFilter: "blur(12px)"
@@ -45,8 +34,8 @@ export default function Header({ className = "" }: { className?: string }) {
           sticky top-0 z-50
           flex flex-row w-full justify-between items-center
           px-6 sm:px-10 xl:px-30 md:px-10
+          py-3
           border-b border-white/20
-          bg-white/5
         `}
       >
         <div className="flex-shrink-0 flex items-center">
@@ -62,7 +51,7 @@ export default function Header({ className = "" }: { className?: string }) {
         {/* Desktop Menu */}
         <Menu />
 
-        {/* Mobile Burger */}
+        {/* Mobile Menu Button */}
         <div className="md:hidden">
           <MobileMenuButton onOpen={() => setOpen(true)} />
         </div>

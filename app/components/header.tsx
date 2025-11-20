@@ -48,16 +48,13 @@ export default function Header({ className = "" }: { className?: string }) {
           />
         </div>
 
-        {/* Desktop Menu */}
         <Menu />
 
-        {/* Mobile Menu Button */}
         <div className="md:hidden">
           <MobileMenuButton onOpen={() => setOpen(true)} />
         </div>
       </motion.header>
 
-      {/* Drawer */}
       <MobileMenuDrawer open={open} setOpen={setOpen} />
     </>
   );

@@ -4,12 +4,11 @@ import { useRouter } from "next/navigation";
 import { motion as m } from "framer-motion";
 import { useState } from "react";
 import { SendHorizonal, Phone, Mail, MapPin, Users } from "lucide-react";
-import AnimatedButton from "@/app/components/helper-components/animated-button";
 import toast, { Toaster } from "react-hot-toast";
 import PopButton from "@/app/components/helper-components/pop-button";
 
 const inputStyle =
-  "p-3 text-base text-gray-800 placeholder-gray-500 border border-gray-300 focus:border-fuchsia-500 w-full rounded-md bg-white/70 backdrop-blur-md transition-all duration-300";
+  "p-3 text-base text-gray-800 placeholder-gray-500 border border-gray-300 focus:border-fuchsia-500 w-full rounded-md bg-white/70 transition-all duration-300";
 
 export default function ContactUsPage() {
   const [formData, setFormData] = useState({
@@ -107,7 +106,7 @@ export default function ContactUsPage() {
 
         <form
           className="w-full max-w-3xl flex flex-col gap-10 shadow-lg p-4 sm:p-12 rounded-2xl 
-        border border-fuchsia-200 bg-white/80 backdrop-blur-lg"
+        border border-fuchsia-200 bg-white/80"
         >
           <div className="flex flex-col gap-10">
             <h2 className="text-2xl font-bold text-fuchsia-900">

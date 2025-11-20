@@ -12,7 +12,7 @@ export default function ServicesBanner() {
 
     return (
         <div className="flex flex-col bg-light justify-between items-center gap-20 items-center width-full py-10">
-            <div className="flex flex-col relative md:items-center backdrop-blur-md bg-white/20 shadow-xl shadow-fuchsia-100 lg:w-[75%] w-[95%] h-auto py-10 px-10  rounded-2xl ">
+            <div className="flex flex-col relative md:items-center bg-white/20 shadow-xl shadow-fuchsia-100 lg:w-[75%] w-[95%] h-auto py-10 px-10  rounded-2xl ">
                 <div className="flex flex-col gap-10 pb-10 items-center w-full">
                     <div className="w-full flex flex-col items-center">
                         <AnimatedAsset svgSrc="/Images/Services.svg" animation="float" className="w-35 h-13" />

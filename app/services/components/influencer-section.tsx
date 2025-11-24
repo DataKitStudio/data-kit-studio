@@ -1,50 +1,6 @@
-import { ChevronRight } from "lucide-react"
-import Image from "next/image"
-import InfluencerCard from "./helper-components/influencer-card"
 import VideoPlayer from "@/app/components/helper-components/video-player"
 import NormalButton from "@/app/components/helper-components/normal-button"
 
-const influencerServices = [
-    {
-        title: "Brand Strategy & Personal Branding",
-        services: [
-            "Profile optimization (bio, highlights, link-in-bio setup)",
-            "Content strategy planning",
-            "Brand voice & visual identity",
-            "Hashtag and keyword strategy"
-        ]
-    },
-    {
-        title: "Content Creation & Editing",
-        services: [
-            "Video editing (Reels, Shorts, YouTube)",
-            "Thumbnail & caption design",
-            "Photo retouching / color grading",
-            "Scriptwriting & storytelling"
-        ]
-    },
-    {
-        title: "Social Media Management",
-        services: [
-            "Post scheduling",
-            "Community management (comments, DMs)",
-            "Hashtag research",
-            "Engagement analytics & reporting"
-        ]
-    },
-    {
-        title: "Brand Collaboration & Sponsorship Management",
-        services: [
-            "Pitching to brands",
-            "Creating media kits / influencer decks",
-            "Negotiating deals & pricing",
-            "Contract templates"
-        ]
-    },
-
-
-
-]
 
 export default function InfluencerSection() {
     return (
@@ -54,7 +10,6 @@ export default function InfluencerSection() {
 
                 <div className="flex flex-col justify-center items-center lg:flex-row gap-10">
 
-                    {/* TEXT — default second, LG first */}
                     <div className="flex flex-2 flex-col gap-10 order-2 lg:order-1">
                         <div className="flex flex-col items-start gap-5">
                             <h1 className="text-4xl text-primary font-extrabold">Are you an influencer looking for help?</h1>
@@ -70,7 +25,6 @@ export default function InfluencerSection() {
                         </div>
                     </div>
 
-                    {/* VIDEO — default first, LG second */}
                     <div className="flex flex-1 md:justify-center rounded-4xl overflow-hidden relative w-full md:w-1/2 lg:w-1/3 order-1 lg:order-2">
                         <VideoPlayer videoUrl="/Videos/services-page/influencer.webm" />
                     </div>

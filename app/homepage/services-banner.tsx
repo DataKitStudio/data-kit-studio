@@ -21,7 +21,7 @@ export default function ServicesBanner() {
                 <div className="w-full flex flex-col gap-10 items-center">
 
 
-                    <a className=" p-2 rounded-md border" href="/services">View all services</a>
+                    <a className="text-dark p-2 rounded-md border" href="/services">View all services</a>
                     <NormalButton text="Want to discuss" text2=" Let's Schedule a Call" icon="PhoneCall" className="w-auto" />
                 </div>
             </div>

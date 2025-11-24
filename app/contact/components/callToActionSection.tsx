@@ -11,8 +11,8 @@ export default function CallToActionSection() {
             <div className="lg:w-[75%] w-[95%]">
                 <m.h1
                     transition={{ duration: 1, ease: "easeOut" }}
-                    initial={{ x: -50, opacity: 0 }}
-                    whileInView={{ x: 0, opacity: 1 }}
+                    initial={{ y: 50, opacity: 0 }}
+                    whileInView={{ y: 0, opacity: 1 }}
                     viewport={{ once: true }}
                     className="text-primary text-4xl font-bold lg:w-1/2 ">Let’s collaborate and craft your next big digital success.</m.h1>
             </div>

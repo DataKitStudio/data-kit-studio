@@ -19,7 +19,6 @@ export default function Home() {
       <div style={{ contentVisibility: "auto" }}>
         <ResultSection />
       </div>
-
       <ProcessSection />
       <WhyUsSection />
       <CallToActionSection />

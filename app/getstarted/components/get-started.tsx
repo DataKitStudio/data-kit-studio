@@ -1,7 +1,5 @@
 "use client";
 import { motion as m } from "motion/react";
-import { SendHorizonal, CheckCircle, Target, Lightbulb, Rocket } from "lucide-react";
-import AnimatedButton from "@/app/components/helper-components/animated-button";
 
 export default function GetStartedPage() {
     return (

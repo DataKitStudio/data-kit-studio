@@ -8,7 +8,7 @@ export default function Categories() {
       <div className="flex flex-col justify-between gap-6 sm:gap-10 md:w-2/3 text-dark text-center md:text-left">
         <AnimatedH1
           text="Services We Provide"
-          className="text-3xl sm:text-4xl font-extrabold text-primary"
+          className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-b from-fuchsia-900 via-[#f081f3] to-[#a3a9ce] bg-clip-text text-transparent"
         />
         <AnimatedH1
           text="Comprehensive digital solutions tailored to elevate your brand and drive measurable results"

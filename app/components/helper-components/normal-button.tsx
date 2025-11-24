@@ -9,7 +9,7 @@ export default function NormalButton({ text, text2, icon, className }: { text: s
     const style = className ? className : "";
     return (
         <div className={`${style + " "}bg-light p-2 border border-primary/20 rounded-2xl`}>
-            <h1 className="flex gap-1 text-dark items-center flex-row">{text}{Icon && <Icon className="text-primary" size={15} />} <a className="text-primary underline" href="/contact">{text2} </a> </h1>
+            <h1 className="flex gap-1 text-sm text-dark items-center flex-row">{text}{Icon && <Icon className="text-primary" size={12} />} <a className="text-primary underline" href="/contact">{text2} </a> </h1>
         </div>
     )
 }

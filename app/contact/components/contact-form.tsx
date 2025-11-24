@@ -24,6 +24,8 @@ export default function ContactUsPage() {
   const [error, setError] = useState<string | null>(null);
   const [status, setStatus] = useState("");
 
+  const [loading, setLoading] = useState(false);
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -31,6 +33,7 @@ export default function ContactUsPage() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true)
 
     if (!validateData()) return;
     const res = await fetch("/api/submit-form", {
@@ -57,22 +60,28 @@ export default function ContactUsPage() {
         website: "",
         type: "Contact Form"
       });
+      setLoading(false);
     } else {
       console.log(res)
       toast.error("Something went wrong. Please try again.");
+      setLoading(false);
     }
+
   };
 
   const route = useRouter();
 
   const validateData = () => {
     if (!formData.name) {
+      setLoading(false);
       setError("Please provide your name!");
       return false;
     } else if (!formData.email) {
+      setLoading(false);
       setError("Please provide your email!");
       return false;
     } else if (!formData.message) {
+      setLoading(false);
       setError("Please enter your message!");
       return false;
     } else {
@@ -80,6 +89,8 @@ export default function ContactUsPage() {
       return true;
     }
   };
+
+
 
   return (
     <div className="flex flex-col items-center w-full">
@@ -107,6 +118,7 @@ export default function ContactUsPage() {
         <form
           className="w-full max-w-3xl flex flex-col gap-10 shadow-lg p-4 sm:p-12 rounded-2xl 
         border border-fuchsia-200 bg-white/80"
+          onSubmit={handleSubmit}
         >
           <div className="flex flex-col gap-10">
             <h2 className="text-2xl font-bold text-fuchsia-900">
@@ -155,8 +167,13 @@ export default function ContactUsPage() {
           </div>
 
           <div className="flex justify-center pt-4">
-            <PopButton text="Send Message" icon="SendHorizontal" />
-
+            <PopButton
+              text={loading ? "Sending..." : "Send Message"}
+              icon={loading ? "Rocket" : "SendHorizontal"}
+              loading={loading}
+              loadingEnabled={true}
+              disabled={loading}
+            />
           </div>
         </form>
 

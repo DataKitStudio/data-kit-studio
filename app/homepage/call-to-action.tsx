@@ -18,18 +18,6 @@ export default function CallToActionSection() {
             </h2>
             <div className="flex sm:flex-row flex-col gap-15 w-full items-center justify-center min-w-170">
                 <PopButton text="Start Your Project" className="text-md" icon="Rocket" onClick={() => { router.push("/getstarted") }} />
-                {/* <m.button
-                onClick={()=>{router.push("/getstarted")}}
-                whileHover={{scale:1.1}}
-                transition={{duration:0.5}}
-                className="flex gap-2 bg-primary justify-center max-w-60 p-4 items-center rounded-xl font-bold text-light shadow-xl
-                hover:bg-light hover:border-2 hover:border-primary hover:text-dark">Start Your Project <Rocket/></m.button> */}
-                {/* <m.button
-                    onClick={() => { router.push("/contact") }}
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.5 }}
-                    className="flex gap-2 border-2 justify-center max-w-60 border-primary text-primary items-center font-bold p-4 rounded-xl shadow-xl
-                hover:bg-primary hover:text-light">Contact Sales<MessageCircle /></m.button> */}
                 <PopButton text="Contact Us" icon="MessageCircle" onClick={() => { router.push("/contact") }} />
             </div>
         </div>

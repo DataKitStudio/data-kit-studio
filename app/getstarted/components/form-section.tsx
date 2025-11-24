@@ -6,7 +6,7 @@ import toast, { Toaster } from "react-hot-toast";
 export default function FormSection() {
 
   const [error, setError] = useState<string | null>(null)
-
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -24,7 +24,7 @@ export default function FormSection() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
+    setLoading(true)
     if (!validateData()) return;
     const res = await fetch("/api/submit-form", {
       method: "POST",
@@ -43,20 +43,25 @@ export default function FormSection() {
         message: "",
         type: "Project Form"
       });
+      setLoading(false)
     } else {
       toast.error("Something went wrong. Please try again.");
+      setLoading(false)
     }
   }
 
   const validateData = () => {
     if (!formData.name) {
       setError("Please provide your name!");
+      setLoading(false)
       return false;
     } else if (!formData.email) {
       setError("Please provide your email!");
+      setLoading(false)
       return false;
     } else if (!formData.message) {
       setError("Please enter your message!");
+      setLoading(false)
       return false;
     } else {
       setError(null);
@@ -135,7 +140,13 @@ export default function FormSection() {
 
           {/* Button */}
           <div className="flex justify-center pt-4">
-            <PopButton text="Submit Project" icon="SendHorizontal" />
+            <PopButton
+              text={loading ? "Sending..." : "Submit Project"}
+              icon={loading ? "Rocket" : "SendHorizontal"}
+              loading={loading}
+              loadingEnabled={true}
+              disabled={loading}
+            />
           </div>
         </form>
       </div>

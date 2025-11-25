@@ -122,11 +122,13 @@ export default function FormSection() {
             className="p-3 border rounded-md text-dark focus:outline-none focus:ring-2 focus:ring-fuchsia-400"
           >
             <option value="">Select Project Type</option>
-            <option value="Brand Strategy">Brand Strategy</option>
-            <option value="Social Media Marketing">Social Media Marketing</option>
+            <option value="Brand Strategy">Strategic Marketing</option>
+            <option value="Social Media Marketing">Creative Design</option>
             <option value="Web Development">Web Development</option>
-            <option value="Video Production">Video Production</option>
-            <option value="Other">Other</option>
+            <option value="Video Production">Social Media Management</option>
+            <option value="Staffing">Staffing</option>
+            <option value="Other">AI Automation</option>
+            <option value="Other">SEO</option>
           </select>
 
           <textarea

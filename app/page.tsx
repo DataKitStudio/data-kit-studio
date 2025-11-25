@@ -11,7 +11,7 @@ import LazyVideoBanner from "./homepage/components/video-banner";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="bg-light">
       <Header className="shadow-lg shadow-fuchsia-300/30" />
 
       <LazyVideoBanner />

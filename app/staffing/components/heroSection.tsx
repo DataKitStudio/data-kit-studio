@@ -24,7 +24,7 @@ export default function StaffingHeroSection() {
 
                 </div>
                 <div className="relative w-full shadow-xl shadow-fuchsia-300/50 relative max-w-[400px] rounded-4xl overflow-hidden">
-                    <VideoPlayer videoUrl="/Videos/homepage/homepage-banner.webm" />
+                    <VideoPlayer videoUrl="/Videos/staffing/staffing.mp4" />
                 </div>
             </div>
 

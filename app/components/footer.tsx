@@ -27,11 +27,11 @@ export default function Footer() {
                                 <div className="flex gap-2">
                                     {
                                         socialMedia.map(({ key, image, link }) => {
-                                            const Icon = (Icons as any)[image];
-                                            if (!Icon) return null
                                             return (
                                                 <a className="text-light" href={link}>
-                                                    <Icon />
+                                                    <div className="relative flex justify-center items-center relative w-5 h-5">
+                                                        <Image src={image} fill alt={"socialMedia"} />
+                                                    </div>
                                                 </a>
                                             )
                                         })

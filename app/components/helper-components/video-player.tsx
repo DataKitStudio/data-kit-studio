@@ -8,36 +8,43 @@ type VideoPlayerProp = {
 };
 
 export default function VideoPlayer({ videoUrl, className }: VideoPlayerProp) {
-
     const containerRef = useRef<HTMLDivElement>(null);
     const videoRef = useRef<HTMLVideoElement>(null);
     const [isVisible, setIsVisible] = useState(false);
-
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            entries => {
-                entries.forEach(entry => {
+        const setupObserver = () => {
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    const entry = entries[0];
                     setIsVisible(entry.isIntersecting);
-                });
-            },
-            {
-                threshold: 0.2,
-                rootMargin: "200px",
-            }
-        );
+                },
+                {
+                    threshold: 0.2,
+                    rootMargin: "200px",
+                }
+            );
 
-        if (containerRef.current) observer.observe(containerRef.current);
+            if (containerRef.current) observer.observe(containerRef.current);
 
-        return () => observer.disconnect();
+            return () => observer.disconnect();
+        };
+
+        if ("requestIdleCallback" in window) {
+            (window as any).requestIdleCallback(setupObserver);
+        } else {
+            setTimeout(setupObserver, 1);
+        }
     }, []);
 
     useEffect(() => {
-        if (!videoRef.current) return;
+        const video = videoRef.current;
+        if (!video) return;
 
         if (isVisible) {
-            videoRef.current.play();
+            if (video.paused) video.play().catch(() => { });
         } else {
-            videoRef.current.pause();
+            if (!video.paused) video.pause();
+            video.currentTime = 0;
         }
     }, [isVisible]);
 

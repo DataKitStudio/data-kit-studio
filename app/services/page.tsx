@@ -31,7 +31,7 @@ export default function Services() {
                 buttonTextMain="Interested?"
                 buttonTextSecondary="Let's book a call!"
                 icon="PhoneCall"
-                videoUrl="/Videos/services-page/influencer.webm"
+                videoUrl="/Videos/services-page/design.mp4"
                 reverse={true}
                 extraComponent={<InfluencerCard service={["DESIGN", "DESIGN", "DESIGN"]} />}
                 servicesComponent={<ServicesCard services={["Social Media", "Ads", "Videos"]} />}

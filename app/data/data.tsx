@@ -308,24 +308,20 @@ export const brand = [
 export const socialMedia = [
     {
         key: 1,
-        image: "Facebook",
+        image: "/Images/footer/facebook.png",
         link: "https://www.facebook.com/datakitstudio01"
     },
     {
         key: 1,
-        image: "Instagram",
+        image: "/Images/footer/instagram.png",
         link: "https://www.instagram.com/datakitstudioofficial"
     },
     {
         key: 1,
-        image: "Twitter",
-        link: ""
+        image: "/Images/footer/linkedin.png",
+        link: "https://www.linkedin.com/company/datakitstudio"
     },
-    {
-        key: 1,
-        image: "LinkedIn",
-        link: ""
-    },
+
 ]
 
 export const contact = [

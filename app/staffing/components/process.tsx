@@ -10,7 +10,7 @@ export default function ProcessSection() {
             <div className="flex w-[90%] lg:w-[66%] flex-col gap-10 rounded-2xl shadow-md shadow-fuchsia-300 p-10 border border-primary/40 bg-light">
                 <h1 className="md:text-7xl py-2 text-center text-5xl bg-gradient-to-b from-fuchsia-900 to-[#f081f3] bg-clip-text text-transparent font-bold">Our Process</h1>
                 <hr className="border border-fuchsia-100" />
-                <div className="flex gap-10 sm:gap-0 sm:flex-row flex-col">
+                <div className="flex flex-col-reverse gap-10 sm:gap-0 sm:flex-row flex-col">
                     <div className="flex-1 min-w-[220px]">
                         {
                             staffingProcess.map((service, key) => (

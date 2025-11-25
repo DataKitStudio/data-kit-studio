@@ -9,7 +9,7 @@ export default function WhyChooseSection() {
                         <h1 className="md:text-7xl py-2 text-center text-5xl bg-gradient-to-b from-fuchsia-900 to-[#f081f3] bg-clip-text text-transparent font-bold">Why Choose DataKit Studio</h1>
                         <hr className="border border-fuchsia-100" />
                     </div>
-                    <ul className="grid grid-cols-2">
+                    <ul className="grid md:grid-cols-2 gap-5">
                         <li className="flex text-lg gap-5">
                             <CircleChevronRight className="text-fuchsia-300 flex-shrink-0" size={20} />
                             Expert support without building an internal recruitment team

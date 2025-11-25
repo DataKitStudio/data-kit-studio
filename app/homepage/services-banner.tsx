@@ -16,7 +16,7 @@ export default function ServicesBanner() {
                     </div>
                     <hr className="border z-1 w-full border-dark/10" />
                 </div>
-                <AnimatedAsset svgSrc="/Images/blur-background.png" animation="rotate" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 w-70 h-70" />
+                <AnimatedAsset svgSrc="/Images/blur-background.png" animation="rotate" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 min-w-5 min-h-5" />
                 <CardLight data={services} />
                 <div className="w-full flex flex-col gap-10 items-center">
                     <a className="text-dark p-2 rounded-md border" href="/services">View all services</a>

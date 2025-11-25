@@ -14,7 +14,7 @@ import InfluencerCard from "./components/helper-components/influencer-card"
 
 export default function Services() {
     return (
-        <div className="bg-light flex flex-col items-center">
+        <div className="bg-light">
             <Header />
             <Categories />
             <ServiceSection heading="Strategic Marketing"

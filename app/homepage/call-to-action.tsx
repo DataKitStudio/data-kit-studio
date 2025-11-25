@@ -8,10 +8,8 @@ export default function CallToActionSection() {
     const router = useRouter()
 
     return (
-        <div className="w-full flex flex-col items-center bg-primary">
-
-
-            <div className="flex flex-col w-[95%] bg-primary gap-8 items-center">
+        <div className="w-full flex flex-col py-20 items-center">
+            <div className="flex flex-col w-[95%] gap-8 items-center">
                 <h1 className="text-4xl text-dark font-extrabold text-center">
                     Ready to <i className="text-secondary">GROW</i> with us?
                 </h1>

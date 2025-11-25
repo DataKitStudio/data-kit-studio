@@ -198,6 +198,36 @@ export const staffingServices = [
     }
 ]
 
+export const staffingProcess = [
+    {
+        "key": 1,
+        "title": "Research & Dev",
+    },
+
+    {
+        "key": 2,
+        "title": "Talent Recruitment",
+
+    },
+    {
+        "key": 3,
+        "title": "Sourcing",
+
+    },
+    {
+        "key": 4,
+        "title": "Screening",
+    },
+    {
+        "key": 5,
+        "title": "Interview",
+    },
+    {
+        "key": 6,
+        "title": "Joining",
+    }
+]
+
 export const platforms = [
     {
         "key": 1,

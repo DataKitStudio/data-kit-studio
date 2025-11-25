@@ -11,14 +11,14 @@ import LazyVideoBanner from "./homepage/components/video-banner";
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-auto w-full bg-light">
+    <div className="">
       <Header className="shadow-lg shadow-fuchsia-300/30" />
 
       <LazyVideoBanner />
       <ServicesBanner />
-      <div style={{ contentVisibility: "auto" }}>
-        <ResultSection />
-      </div>
+
+      <ResultSection />
+
       <ProcessSection />
       <WhyUsSection />
       <CallToActionSection />

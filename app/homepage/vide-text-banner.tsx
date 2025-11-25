@@ -12,8 +12,11 @@ export default function VideoTextBanner() {
     const route = useRouter()
 
     return (
-        <section style={{ contentVisibility: "auto" }} className="w-full">
-            <div className="flex flex-col items-center bg-[url('/Images/background/banner-bg.png')] py-10 bg-cover bg-center w-full lg:h-dvh">
+        <section
+            className="flex flex-col h-auto bg-fixed bg-cover bg-center lg:h-dvh pb-20"
+            style={{ backgroundImage: "url('/Images/background/banner-bg.png')" }}
+        >
+            <div className="flex flex-col items-center py-10 w-full">
                 <div className="flex flex-col items-center justify-center gap-10 lg:flex-row xl:w-[75%] w-[95%] ">
                     <div className="relative w-full flex-1 relative max-w-[400px] rounded-4xl overflow-hidden">
                         <VideoPlayer videoUrl="/Videos/homepage/homepage-banner.webm" />

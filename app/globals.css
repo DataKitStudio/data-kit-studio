@@ -56,7 +56,6 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   max-width: 100%;
-  overflow-x: clip;
   /* DOES NOT break sticky */
   /* overflow-x: hidden !important; */
   width: 100%;

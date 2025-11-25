@@ -154,6 +154,50 @@ export const services = [
     }
 ]
 
+export const staffingServices = [
+    {
+        "key": 1,
+        "title": "Talent Requirement Understanding",
+        "imageUrl": "/Images/staffing/serviceSection/user-search.png",
+        "description": "We analyze your job needs, required skills, and team culture to define the ideal candidate profile."
+
+    },
+
+    {
+        "key": 2,
+        "title": "Job Posting & Talent Outreach",
+        "imageUrl": "/Images/staffing/serviceSection/megaphone.png",
+        "description": "We promote your openings on LinkedIn, job platforms, and targeted networks to reach quality candidates."
+    },
+    {
+        "key": 3,
+        "title": "Candidate Sourcing",
+        "imageUrl": "/Images/staffing/serviceSection/networking.png",
+        "description": "Using advanced tools and our internal database, we find candidates who match your technical and cultural requirements."
+
+    },
+    {
+        "key": 4,
+        "title": "Screening & Shortlisting",
+        "imageUrl": "/Images/staffing/serviceSection/filter.png",
+        "description": "Resumes are evaluated thoroughly, and only the best-fit candidates are shared with your team."
+    },
+    {
+        "key": 5,
+        "title": "Interview Coordination",
+        "imageUrl": "/Images/staffing/serviceSection/calendar.png",
+        "description": "We handle scheduling, communication, follow-ups, and reminders to make the process smooth."
+
+    },
+    {
+        "key": 6,
+        "title": "Selection & Offer Support",
+        "imageUrl": "/Images/staffing/serviceSection/handshake.png",
+        "description": "We assist with negotiation, offer rollout support, and ensure seamless joining follow-ups."
+
+    }
+]
+
 export const platforms = [
     {
         "key": 1,

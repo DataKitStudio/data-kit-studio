@@ -1,14 +1,24 @@
 
 import Image from "next/image"
-import { services } from "@/app/data/data"
 
 
-export default function CardLight() {
+type CardLightProp = {
+    data: Data[]
+}
+
+type Data = {
+    key: number,
+    title: string,
+    imageUrl: string,
+    description: string
+}
+
+export default function CardLight({ data }: CardLightProp) {
 
     return (
         <div className="grid sm:grid-cols-2 z-1 bg-white/10 grid-cols-1  xl:flex-row  items-center justify-center width-full">
             {
-                services.map((service) => (
+                data.map((service, key) => (
                     <div className="flex gap-5 md:p-5 py-5 flex-row md:items-start items-center w-full h-auto ">
 
                         <Image src={service.imageUrl} width={30} height={50} alt={service.title} />

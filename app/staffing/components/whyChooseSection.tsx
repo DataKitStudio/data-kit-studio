@@ -10,19 +10,19 @@ export default function WhyChooseSection() {
                         <hr className="border border-fuchsia-100" />
                     </div>
                     <ul className="grid md:grid-cols-2 gap-5">
-                        <li className="flex text-lg gap-5">
+                        <li className="flex text-lg gap-5 text-dark">
                             <CircleChevronRight className="text-fuchsia-300 flex-shrink-0" size={20} />
                             Expert support without building an internal recruitment team
                         </li>
-                        <li className="flex text-lg gap-5">
+                        <li className="flex text-lg gap-5 text-dark">
                             <CircleChevronRight className="text-fuchsia-300 flex-shrink-0" size={20} />
                             Faster and more efficient hiring cycles
                         </li>
-                        <li className="flex text-lg gap-5">
+                        <li className="flex text-lg gap-5 text-dark">
                             <CircleChevronRight className="text-fuchsia-300 flex-shrink-0" size={20} />
                             Structured and transparent process
                         </li>
-                        <li className="flex text-lg gap-5">
+                        <li className="flex text-lg gap-5 text-dark">
                             <CircleChevronRight className="text-fuchsia-300 flex-shrink-0" size={20} />
                             Cost-effective staffing solutions
                         </li>

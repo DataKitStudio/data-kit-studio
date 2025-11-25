@@ -14,7 +14,7 @@ export default function WhatWeDoSection() {
                 </div>
 
                 <div className="flex flex-col-reverse lg:flex-col items-center justify-center xl:flex-row gap-5">
-                    <h1 className="flex-1">We act as your trusted hiring partner, offering end-to-end staffing support so you can focus on growing your business while we handle the recruitment workload</h1>
+                    <h1 className="flex-1 text-dark">We act as your trusted hiring partner, offering end-to-end staffing support so you can focus on growing your business while we handle the recruitment workload</h1>
 
                     <div className="flex-1 relative rounded-2xl overflow-hidden">
                         <Image src={"/Images/staffing/hiring.png"} objectFit="contain" alt="hiring image" height={1890} width={3780} />

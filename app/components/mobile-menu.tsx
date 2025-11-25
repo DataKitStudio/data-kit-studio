@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import { AnimatePresence, motion as m } from "framer-motion";
 import { Menu as MenuIcon, X } from "lucide-react";
 import { menuList } from "../data/data";

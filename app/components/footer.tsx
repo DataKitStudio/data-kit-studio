@@ -3,7 +3,6 @@ import { useRouter } from "next/navigation";
 import { links, brand, contact, socialMedia } from "../data/data";
 import Image from "next/image";
 import { Mail, MapPin, PhoneCall } from "lucide-react";
-import * as Icons from "lucide-react"
 
 
 export default function Footer() {

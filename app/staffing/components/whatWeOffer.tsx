@@ -1,5 +1,4 @@
 import CardLight from "@/app/homepage/components/card-light";
-import Image from "next/image";
 import { staffingServices } from "@/app/data/data";
 
 

@@ -1,12 +1,10 @@
 "use client"
-import { PhoneCall } from "lucide-react"
 import Footer from "../components/footer"
 import Header from "../components/header"
 import ScrollToTopButton from "../components/scroll-to-top"
 import CallToAction from "./components/call-to-action"
 import Categories from "./components/categories"
 import ServiceSection from "./components/influencer-section"
-import ServicesSection from "./components/services-section"
 import ServicesCard from "./components/helper-components/services-card"
 import InfluencerCard from "./components/helper-components/influencer-card"
 

@@ -1,5 +1,4 @@
 
-
 import Footer from "../components/footer";
 import Header from "../components/header";
 import ScrollToTopButton from "../components/scroll-to-top";

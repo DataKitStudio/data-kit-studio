@@ -1,12 +1,8 @@
 "use client"
 import PopButton from "@/app/components/helper-components/pop-button"
-import PopInverseButton from "@/app/components/helper-components/pop-inverse-button"
-import { motion as a } from "motion/react"
 import { useRouter } from "next/navigation"
 
-const desctitle1 = "✨ Your Vision, Our Expertise"
-const description1 = " — Let’s Grow Together At House of Influenca, we don’t just offer services — we craft digital experiences that inspire action and drive results. From powerful social media strategies and influencer collaborations to AI-driven automation and creative branding, we help your brand stand out, scale up, and connect meaningfully with your audience. "
-const desctitle2 = "Ready to elevate your digital presence? "
+
 const description2 = "👉 Let’s build something extraordinary —"
 
 

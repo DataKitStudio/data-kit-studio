@@ -1,7 +1,4 @@
 
-import { servicesData } from "@/app/data/categoriesData"
-import ServicesCard from "./helper-components/services-card"
-
 
 export default function ServicesSection() {
     return (

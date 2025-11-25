@@ -1,6 +1,5 @@
 
-import { motion as m } from "motion/react";
-import { SendHorizonal, CheckCircle, Target, Lightbulb, Rocket } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 export default function WhyChooseSection() {
     return (

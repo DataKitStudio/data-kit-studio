@@ -9,7 +9,7 @@ export default function DesktopMenu() {
   const pathname = usePathname();
 
   return (
-    <div className="hidden md:flex flex-row gap-10 items-center">
+    <div className="hidden lg:flex flex-row gap-10 items-center">
       {menuList.map((item) => {
         const isActive = pathname === item.href;
         return (

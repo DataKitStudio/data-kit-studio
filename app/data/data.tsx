@@ -54,6 +54,10 @@ export const menuList = [
         name: "Contact Us",
         href: "/contact"
     },
+    {
+        name: "Staffing",
+        href: "/staffing"
+    },
 ]
 
 export const resultData = [

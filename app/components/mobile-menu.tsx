@@ -10,7 +10,7 @@ export function MobileMenuButton({ onOpen }: { onOpen: () => void }) {
     return (
         <button
             onClick={onOpen}
-            className="md:hidden text-black z-[300]"
+            className="lg:hidden text-black z-[300]"
         >
             <MenuIcon size={28} />
         </button>

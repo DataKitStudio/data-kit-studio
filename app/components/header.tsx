@@ -50,7 +50,7 @@ export default function Header({ className = "" }: { className?: string }) {
 
         <Menu />
 
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <MobileMenuButton onOpen={() => setOpen(true)} />
         </div>
       </motion.header>

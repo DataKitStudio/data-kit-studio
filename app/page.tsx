@@ -6,19 +6,16 @@ import ResultSection from "./homepage/result-section";
 import WhyUsSection from "./homepage/why-us-section";
 import CallToActionSection from "./homepage/call-to-action";
 import ScrollToTopButton from "./components/scroll-to-top";
-import ProcessSection from "./homepage/process-section";
+import ProcessSection from "./homepage/how-it-works-section";
 import LazyVideoBanner from "./homepage/components/video-banner";
 
 export default function Home() {
   return (
     <div className="bg-light">
       <Header className="shadow-lg shadow-fuchsia-300/30" />
-
       <LazyVideoBanner />
       <ServicesBanner />
-
       <ResultSection />
-
       <ProcessSection />
       <WhyUsSection />
       <CallToActionSection />

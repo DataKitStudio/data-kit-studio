@@ -27,25 +27,22 @@ export default function VideoTextBanner() {
                         <PopButton onClick={() => route.push("/getstarted")} text="Book a Call" className="font-bold" icon="Phone" />
                         <h1 className="text-md font-bold text-dark text-justify">{introTag}</h1>
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 items-center">
-                            <div className="flex gap-2 items-center">
-                                <div className="relative w-8 h-8">
-                                    <Image src={"Images/partners/meta-logo-facebook-svgrepo-com.svg"} fill alt="google" priority />
+                            {[
+                                { src: "/Images/partners/meta-logo-facebook-svgrepo-com.svg", label: "Meta partner" },
+                                { src: "/Images/partners/google-svgrepo-com.svg", label: "Google partner" },
+                                { src: "/Images/partners/shopify-color-svgrepo-com.svg", label: "Shopify partner" },
+                            ].map((partner, i) => (
+                                <div className="flex gap-2 items-center" key={i}>
+                                    <Image
+                                        src={partner.src}
+                                        alt={partner.label}
+                                        width={32}
+                                        height={32}
+                                        loading="lazy"
+                                    />
+                                    <h1 className="text-md text-dark">{partner.label}</h1>
                                 </div>
-                                <h1 className="text-md text-md text-dark">Meta partner</h1>
-                            </div>
-                            <div className="flex gap-2 items-center">
-                                <div className="relative w-8 h-8">
-                                    <Image src={"Images/partners/google-svgrepo-com.svg"} fill alt="google" priority />
-                                </div>
-                                <h1 className="text-md text-dark">Google partner</h1>
-                            </div>
-                            <div className="flex gap-2 items-center">
-                                <div className="relative w-8 h-8">
-                                    <Image src={"Images/partners/shopify-color-svgrepo-com.svg"} fill alt="google" priority />
-                                </div>
-                                <h1 className="text-md text-dark">Shopify partner</h1>
-                            </div>
-
+                            ))}
                         </div>
 
                     </div>

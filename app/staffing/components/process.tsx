@@ -32,7 +32,7 @@ export default function ProcessSection() {
                     </div>
                     <div className="w-full flex-1 flex flex-col items-center">
                         <div className="relative border border-fuchsia-200 rounded-2xl overflow-hidden">
-                            <Image src={"/Images/staffing/uibanner.png"} objectFit="contain" alt="hiring image" height={400} width={300} />
+                            <Image src={"/Images/staffing/uibanner.webp"} objectFit="contain" alt="hiring image" height={400} width={300} />
                         </div>
                     </div>
                 </div>

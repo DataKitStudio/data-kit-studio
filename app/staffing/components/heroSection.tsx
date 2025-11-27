@@ -10,7 +10,7 @@ export default function StaffingHeroSection() {
 
     return (
         <section className="flex flex-col lg:h-dvh bg-fixed bg-cover bg-center items-center h-auto py-10 pb-20"
-            style={{ backgroundImage: "url('/Images/staffing/banner.png')" }}
+            style={{ backgroundImage: "url('/Images/staffing/banner.webp')" }}
         >
             <div className="flex flex-col-reverse xl:flex-row gap-5 items-center justify-center lg:w-[75%] w-[95%]">
                 <div className="flex flex-col gap-10 xl:items-start items-center justify-center">

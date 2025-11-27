@@ -30,7 +30,7 @@ export default function AgencySection() {
           <div
             className="w-full h-full flex justify-center items-center">
             <Image
-              src="/Images/about-us/about-us.png"
+              src="/Images/about-us/about-us.webp"
               alt="About agency image"
               width={500}
               height={500}

@@ -2,37 +2,36 @@
 
 import { useRef, useState, useEffect } from "react";
 
-type VideoPlayerProp = {
+type VideoPlayerProps = {
     videoUrl: string;
     className?: string;
 };
 
-export default function VideoPlayer({ videoUrl, className }: VideoPlayerProp) {
+export default function VideoPlayer({ videoUrl, className }: VideoPlayerProps) {
     const containerRef = useRef<HTMLDivElement>(null);
     const videoRef = useRef<HTMLVideoElement>(null);
     const [isVisible, setIsVisible] = useState(false);
+
     useEffect(() => {
-        const setupObserver = () => {
+        const initObserver = () => {
             const observer = new IntersectionObserver(
                 (entries) => {
-                    const entry = entries[0];
-                    setIsVisible(entry.isIntersecting);
+                    setIsVisible(entries[0].isIntersecting);
                 },
                 {
-                    threshold: 0.2,
+                    threshold: 0.25,
                     rootMargin: "200px",
                 }
             );
 
             if (containerRef.current) observer.observe(containerRef.current);
-
             return () => observer.disconnect();
         };
 
         if ("requestIdleCallback" in window) {
-            (window as any).requestIdleCallback(setupObserver);
+            (window as any).requestIdleCallback(initObserver);
         } else {
-            setTimeout(setupObserver, 1);
+            setTimeout(initObserver, 50);
         }
     }, []);
 
@@ -41,9 +40,9 @@ export default function VideoPlayer({ videoUrl, className }: VideoPlayerProp) {
         if (!video) return;
 
         if (isVisible) {
-            if (video.paused) video.play().catch(() => { });
+            video.play().catch(() => { });
         } else {
-            if (!video.paused) video.pause();
+            video.pause();
             video.currentTime = 0;
         }
     }, [isVisible]);
@@ -53,7 +52,6 @@ export default function VideoPlayer({ videoUrl, className }: VideoPlayerProp) {
             <video
                 ref={videoRef}
                 src={videoUrl}
-                className={className}
                 loop
                 muted
                 playsInline

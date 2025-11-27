@@ -41,7 +41,7 @@ export default function VideoTextBanner() {
                 <div className="flex flex-col items-center justify-center gap-10 lg:flex-row xl:w-[75%] w-[95%]">
 
                     {/* 🎥 VIDEO — NOW LAZY LOADED (NOT PART OF LCP) */}
-                    <div className="relative w-full flex-1 max-w-[400px] rounded-4xl overflow-hidden h-[250px] md:h-[300px]">
+                    <div className="relative w-full flex-1 max-w-[400px] rounded-4xl overflow-hidden h-[250px] md:h-[400px]">
                         <VideoPlayer videoUrl="/Videos/homepage/homepage-banner.webm" />
                     </div>
 

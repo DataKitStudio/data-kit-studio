@@ -14,19 +14,29 @@ export default function VideoTextBanner() {
     const route = useRouter();
 
     return (
-        <section
-            className="flex flex-col h-auto bg-cover bg-center bg-no-repeat lg:h-dvh pb-20"
-            style={{ backgroundImage: "url('/Images/background/banner-bg.png')" }}
-        >
+        <section className="relative flex flex-col h-auto bg-cover bg-center bg-no-repeat lg:h-dvh pb-20 overflow-hidden">
+
+            {/* ✅ HERO BACKGROUND IMAGE (LCP FIX) */}
+            <Image
+                src="/Images/background/banner-bg.png"
+                alt="Hero background"
+                fill
+                priority
+                quality={85}
+                className="object-cover -z-10"
+            />
+
             <div className="flex flex-col items-center py-10 w-full">
                 <div className="flex flex-col items-center justify-center gap-10 lg:flex-row xl:w-[75%] w-[95%]">
+
                     {/* VIDEO (lazy-loaded, not LCP) */}
                     <div className="relative w-full flex-1 max-w-[400px] rounded-4xl overflow-hidden">
                         <VideoPlayer videoUrl="/Videos/homepage/homepage-banner.webm" />
                     </div>
 
-                    {/* TEXT COLUMN */}
+                    {/* TEXT COLUMN — NOW LOADS INSTANTLY */}
                     <div className="flex-1 flex flex-col justify-around items-center gap-10 w-full">
+
                         <h1 className="text-4xl text-center md:text-6xl font-bold bg-gradient-to-b from-fuchsia-900 via-[#f081f3] to-[#a3a9ce] bg-clip-text text-transparent">
                             {introTitle}
                         </h1>
@@ -71,6 +81,7 @@ export default function VideoTextBanner() {
                                 </div>
                             ))}
                         </div>
+
                     </div>
                 </div>
             </div>
